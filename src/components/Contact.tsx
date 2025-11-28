@@ -1,10 +1,10 @@
 import { Mail, Linkedin, Github, Twitter } from "lucide-react";
-
+const email = "portfolio@candia.slmail.me";
 const socialLinks = [
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:portfolio@candia.slmail.me",
+    href: `mailto:${email}`,
     color: "hover:text-primary",
   },
   {
@@ -35,7 +35,7 @@ export const Contact = () => {
 
         <div className="flex flex-col sm:flex-row justify-center mb-12">
           <a
-            href="mailto:contact@example.com"
+            href={`mailto:${email}`}
             className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-accent transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Mail size={20} />

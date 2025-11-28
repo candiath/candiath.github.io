@@ -23,6 +23,7 @@ export default function Navigation() {
     { label: "Proyectos", id: "projects" },
     { label: "Experiencia", id: "experience" },
     { label: "Contacto", id: "contact" },
+    // { label: "Descargar CV", id: "cv" },
   ]
 
   return (
@@ -49,6 +50,7 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            <a>Descargar CV</a>
           </div>
 
           {/* Mobile menu button */}
