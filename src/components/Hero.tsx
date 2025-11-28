@@ -42,7 +42,7 @@ export const Hero = () => {
 
         {/* Tecnologías */}
         <div className="flex flex-wrap justify-center gap-4 mt-15">
-          {["Node.js", "Express", "SQL", "Docker", "MongoDB", "PostgreSQL"].map((item) => (
+          {["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "Docker", "Git", "GitHub", "Javascript", "TypeScript", "Netlify", "Render", "Vercel"].map((item) => (
             // className="px-4 py-2 bg-card border border-border rounded-full text-sm text-foreground hover:border-primary transition-colors"
             <span
               key={item}

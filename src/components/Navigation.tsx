@@ -8,7 +8,8 @@ interface NavigationProps {
   setIsDark: (isDark: boolean) => void
 }
 
-export default function Navigation({ isDark, setIsDark }: NavigationProps) {
+// export default function Navigation({ isDark, setIsDark }: NavigationProps) {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const scrollToSection = (id: string) => {

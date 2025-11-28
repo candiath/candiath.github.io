@@ -143,4 +143,16 @@ html {
   .text-balance-custom {
     text-wrap: balance;
   }
+
+  .animate-fade-bg {
+    animation: fade-bg 1s ease-out forwards;
+    animation-delay: 0.1s;
+    background-color: rgb(59 130 246 / 0.4);
+  }
+}
+
+@keyframes fade-bg {
+  to {
+    background-color: transparent;
+  }
 }
