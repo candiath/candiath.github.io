@@ -3,12 +3,6 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
-interface NavigationProps {
-  isDark: boolean
-  setIsDark: (isDark: boolean) => void
-}
-
-// export default function Navigation({ isDark, setIsDark }: NavigationProps) {
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 

@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 const email = "portfolio@candia.slmail.me";
 const socialLinks = [
   {
