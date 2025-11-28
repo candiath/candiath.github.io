@@ -14,20 +14,33 @@ export const Hero = () => {
       {/* Contenedor principal - ancho máximo y centrado */}
       <div className="text-center">
         {/* Avatar circular */}
-        <div className="w-24 h-24 mx-auto mb-6 rounded-full border-2 border-primary/30 flex items-center justify-center fade-in">
-          <span className="text-6xl">👨‍💻</span>
+        <div className="w-50 h-50 mx-auto m-8 rounded-full border-2 border-primary/30 flex items-center justify-center fade-in mt-20">
+          <span className="text-6xl block w-full h-full">
+            <div className="w-full h-full overflow-hidden rounded-full group">
+              <img
+                src="/profile.jpg"
+                alt="Natán Candia"
+                className="w-full h-full object-cover scale-120 transform transition-transform duration-500 group-hover:scale-[1.65]"
+              />
+            </div>
+          </span>
         </div>
 
-        {/* Título principal */}
         <h1 className="text-4xl font-bold">
-          <span className="text-foreground">FullStack Developer</span>
+          <span className="text-foreground">Natán Candia</span>
+        </h1>
+
+
+        {/* Título principal */}
+        <h1 className="text-4xl font-bold m-2">
+          <span className="text-primary">FullStack Developer</span>
           <br />
-          <span className="text-primary">Node.js • Express • React</span>
+          {/* <span className="text-primary">Node.js • Express • React</span> */}
         </h1>
 
         {/* Descripción */}
         <p className="text-lg mt-4 text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Músico y amante de los animales. Construyo soluciones backend robustas
+          Músico, amante de los animales y del aprendizaje continuo. Construyo soluciones backend robustas
           y escalables. Especializado en arquitecturas de microservicios, APIs
           REST y bases de datos SQL.
         </p>

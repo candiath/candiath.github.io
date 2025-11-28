@@ -1,6 +1,7 @@
 import "./App.css";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { CV } from "./components/CV";
 import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
@@ -18,6 +19,7 @@ function App() {
       <About/>
       <Projects/>
       <Experience />
+      <CV />
       <Contact />
       {/* <Timestamp /> */}
       <Footer/>

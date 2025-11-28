@@ -4,16 +4,16 @@ const projects = [
     {
       title: "CLINEX",
       description:
-      "Actualmente estoy desarrollando un sistema distribuído de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend. ",
+      "Sistema distribuído de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend. ",
       technologies: ["Node.js", "Express", "Redis", "MySQL", "JWT", "Jest", "Clean Architecture", "Docker"],
       repo: "https://github.com/candiath/clinex",
     },
     {
       title: "Landing Page Kinecandia",
       description:
-      "Implementé un landing page para una kinesióloga y fisiatra, facilitando el contacto con  potenciales pacientes y proveyendo una presentación clara de servicios, perfil y testimonios.",
+      "Landing page para una kinesióloga y fisiatra, que facilita el contacto con  potenciales pacientes y provee una presentación clara de servicios, perfil y testimonios.",
       technologies: ["Javascript", "CSS", "HTML", "Netlify"],
-      demo: "https://kinecandia.netlify.app/",
+      site: "https://kinecandia.netlify.app/",
       repo: "https://github.com/candiath/kine-landing",
     
     },
@@ -41,10 +41,10 @@ export const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  { project.demo ? 
-                    <a href={project.demo} className="flex items-center gap-2 px-4 py-2 text-sm bg-primary text-primary-foreground rounded-lg hover:bg-accent transition-colors">
+                  { project.site ? 
+                    <a href={project.site} className="flex items-center gap-2 px-4 py-2 text-sm bg-primary text-primary-foreground rounded-lg hover:bg-accent transition-colors">
                       <ExternalLink size={16} />
-                      Demo
+                      Sitio
                     </a>
                   : ''}
                   {project.repo ? <a href={project.repo} className="flex items-center gap-2 px-4 py-2 text-sm border border-border rounded-lg hover:border-primary transition-colors text-foreground">

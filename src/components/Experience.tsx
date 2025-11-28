@@ -2,17 +2,17 @@
 const experience = [
   {
     period: "junio 2025 - Presente",
-    title: "Backend Developer",
+    title: "Portal CLINEX",
     company: "CLINEX",
     description:
-      "Actualmente estoy desarrollando un sistema distribuído de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend.  Tecnologías: Node.js, Express, Redis, MySQL, JWT, Jest, Clean Architecture, Docker. ",
+      "Sitio web y panel de administración para un sistema de gestión clínica distribuida con soporte para múltiples sedes. Permite gestionar pacientes, turnos y profesionales, visualizar métricas y reportes, y administrar permisos y configuraciones desde una interfaz segura, escalable y optimizada para flujo de trabajo clínico.",
   },
   {
     period: "marzo 2025 - abril 2025",
-    title: "Frontend Developer",
+    title: "Landing Page Kinecandia",
     company: "Kinecandia",
     description:
-      "Implementé un landing page para una kinesióloga y fisiatra, facilitando el contacto con  potenciales pacientes y proveyendo una presentación clara de servicios, perfil y testimonios.  Tecnologías: HTML, CSS, JavaScript, Netlify.",
+      "Landing page enfocada en conversión para una kinesióloga y fisiatra: presenta servicios, perfil profesional y testimonios, incluye formulario de contacto y llamadas a la acción, y está diseñada responsive y optimizada para velocidad.",
   },
 ];
 
@@ -72,6 +72,49 @@ export const Experience = () => {
 
         <div className="grid mb-6 gap-12 md:gap-8 lg:gap-16 md:grid-cols-3">
           {/* TODO: convert to FC */}
+
+
+          {/* Education */}
+          <div>
+            <h3 className="text-2xl font-bold text-primary mb-8">Formación académica</h3>
+            <div className="space-y-6">
+              {education.map((edu, index) => (
+                <div
+                  key={index}
+                  className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"
+                >
+                  <div className="absolute -left-3 -top-1 w-4 h-4 bg-accent rounded-full border-4 border-background">
+                  </div>
+                    <p className="text-sm text-accent font-semibold mb-1">{edu.year}</p>
+                    <h4 className="text-xl font-bold text-foreground mb-1">{edu.title}</h4>
+                    <p className="text-muted-foreground text-sm">{edu.organization}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          
+          {/* Courses */}
+          <div>
+            <h3 className="text-2xl font-bold text-primary mb-8">Cursos</h3>
+            <div className="space-y-6">
+              {courses.map((edu, index) => (
+                <div
+                  key={index}
+                  className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"
+                >
+                  <div className="absolute -left-3 -top-1 w-4 h-4 bg-accent rounded-full border-4 border-background">
+                  </div>
+                    <p className="text-sm text-accent font-semibold mb-1">{edu.year}</p>
+                    <h4 className="text-xl font-bold text-foreground mb-1">{edu.title}</h4>
+                    <p className="text-muted-foreground text-sm">{edu.organization}</p>
+                </div>
+              ))}
+            </div>
+          </div>          
+
+
+
           {/* Experience */}
           <div>
             <h3 className="text-2xl font-bold text-primary mb-8">Experiencia</h3>
@@ -91,41 +134,11 @@ export const Experience = () => {
               ))}
             </div>
           </div>
-          {/* Education */}
-          <div>
-            <h3 className="text-2xl font-bold text-primary mb-8">Formación académica</h3>
-            <div className="space-y-6">
-              {education.map((edu, index) => (
-                <div
-                  key={index}
-                  className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"
-                >
-                  <div className="absolute -left-3 -top-1 w-4 h-4 bg-accent rounded-full border-4 border-background">
-                  </div>
-                    <p className="text-sm text-accent font-semibold mb-1">{edu.year}</p>
-                    <h4 className="text-xl font-bold text-foreground mb-1">{edu.title}</h4>
-                    <p className="text-muted-foreground text-sm">{edu.organization}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-primary mb-8">Cursos</h3>
-            <div className="space-y-6">
-              {courses.map((edu, index) => (
-                <div
-                  key={index}
-                  className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"
-                >
-                  <div className="absolute -left-3 -top-1 w-4 h-4 bg-accent rounded-full border-4 border-background">
-                  </div>
-                    <p className="text-sm text-accent font-semibold mb-1">{edu.year}</p>
-                    <h4 className="text-xl font-bold text-foreground mb-1">{edu.title}</h4>
-                    <p className="text-muted-foreground text-sm">{edu.organization}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+
+          
+
+
+
         </div>
       </div>
     </section>

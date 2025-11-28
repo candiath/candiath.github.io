@@ -16,8 +16,8 @@ export default function Navigation() {
     { label: "Sobre mí", id: "about" },
     { label: "Proyectos", id: "projects" },
     { label: "Experiencia", id: "experience" },
+    { label: "CV", id: "cv" },
     { label: "Contacto", id: "contact" },
-    // { label: "Descargar CV", id: "cv" },
   ]
 
   return (
@@ -44,7 +44,6 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
-            <a>Descargar CV</a>
           </div>
 
           {/* Mobile menu button */}
