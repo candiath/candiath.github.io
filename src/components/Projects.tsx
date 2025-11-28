@@ -2,61 +2,30 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
     {
-      title: "API REST E-commerce",
+      title: "CLINEX",
       description:
-        "Plataforma de e-commerce completa con autenticación, pagos integrados y gestión de inventario en tiempo real.",
-      technologies: ["Node.js", "Express", "PostgreSQL", "Stripe"],
-      repo: "#",
+      "Actualmente estoy desarrollando un sistema distribuído de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend. ",
+      technologies: ["Node.js", "Express", "Redis", "MySQL", "JWT", "Jest", "Clean Architecture", "Docker"],
+      repo: "https://github.com/candiath/clinex",
     },
     {
-      title: "Sistema de Microservicios",
+      title: "Landing Page Kinecandia",
       description:
-        "Arquitectura de microservicios escalable con orquestación, load balancing y monitoreo centralizado.",
-      technologies: ["Node.js", "Docker", "Kubernetes", "Redis"],
-      demo: "#",
+      "Implementé un landing page para una kinesióloga y fisiatra, facilitando el contacto con  potenciales pacientes y proveyendo una presentación clara de servicios, perfil y testimonios.",
+      technologies: ["Javascript", "CSS", "HTML", "Netlify"],
+      demo: "https://kinecandia.netlify.app/",
+      repo: "https://github.com/candiath/kine-landing",
     
-    },
-    {
-      title: "CMS Headless",
-      description:
-        "Sistema de gestión de contenidos sin cabeza con API GraphQL, versionado y control de acceso granular.",
-      technologies: ["Node.js", "GraphQL", "MongoDB", "JWT"],
-      demo: "#",
-      repo: "#",
-    },
-    {
-      title: "Analytics Dashboard",
-      description:
-        "Dashboard de analytics en tiempo real con procesamiento de eventos y visualización de datos complejos.",
-      technologies: ["Node.js", "PostgreSQL", "WebSockets", "React"],
-      demo: "#",
-      repo: "#",
-    },
-    {
-      title: "Chat en Tiempo Real",
-      description:
-        "Aplicación de mensajería en tiempo real con encriptación end-to-end y sincronización offline-first.",
-      technologies: ["Node.js", "Socket.io", "MongoDB", "Redis"],
-      demo: "#",
-      repo: "#",
-    },
-    {
-      title: "Orquestador de Tareas",
-      description:
-        "Sistema de cola de trabajo distribuido para procesar tareas asincrónicas a escala con reintentos automáticos.",
-      technologies: ["Node.js", "Bull", "Redis", "PostgreSQL"],
-      demo: "#",
-      repo: "#",
     },
   ]
 export const Projects = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects">
       <div>
-        <h2 className="text-4xl font-bold mb-12 text-center text-balance">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance">
           Proyectos <span className="text-primary">Destacados</span>
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {
             projects.map( (project, index) => (
               <div key={index} className="group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary">

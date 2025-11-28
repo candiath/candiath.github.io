@@ -33,6 +33,35 @@ const education = [
     organization: "EPET N° 13",
   },
 ];
+
+const courses = [
+  {
+    year: "2025",
+    title: "React: de cero a experto - Edición 2025",
+    organization: "DevTalles",
+  },
+  {
+    year: "2024",
+    title: "JavaScript Moderno: Guía para dominar el lenguaje",
+    organization: "DevTalles",
+  },
+  {
+    year: "2024",
+    title: "NodeJS: De cero a experto",
+    organization: "Udemy",
+  },
+  {
+    year: "2024",
+    title: "GIT+GitHub: Todo un sistema de control de versiones de cero",
+    organization: "DevTalles",
+  },
+  {
+    year: "2024",
+    title: "Visual Studio Code: Mejora tu velocidad para codificar",
+    organization: "DevTalles",
+  },
+]
+
 export const Experience = () => {
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
@@ -41,7 +70,7 @@ export const Experience = () => {
           Experiencia y <span className="text-primary">Formación</span>
         </h2>
 
-        <div className="grid mb-6 gap-12 md:gap-8 lg:gap-16 md:grid-cols-2">
+        <div className="grid mb-6 gap-12 md:gap-8 lg:gap-16 md:grid-cols-3">
           {/* TODO: convert to FC */}
           {/* Experience */}
           <div>
@@ -64,9 +93,26 @@ export const Experience = () => {
           </div>
           {/* Education */}
           <div>
-            <h3 className="text-2xl font-bold text-primary mb-8">Formación y cursos</h3>
+            <h3 className="text-2xl font-bold text-primary mb-8">Formación académica</h3>
             <div className="space-y-6">
               {education.map((edu, index) => (
+                <div
+                  key={index}
+                  className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"
+                >
+                  <div className="absolute -left-3 -top-1 w-4 h-4 bg-accent rounded-full border-4 border-background">
+                  </div>
+                    <p className="text-sm text-accent font-semibold mb-1">{edu.year}</p>
+                    <h4 className="text-xl font-bold text-foreground mb-1">{edu.title}</h4>
+                    <p className="text-muted-foreground text-sm">{edu.organization}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-primary mb-8">Cursos</h3>
+            <div className="space-y-6">
+              {courses.map((edu, index) => (
                 <div
                   key={index}
                   className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"

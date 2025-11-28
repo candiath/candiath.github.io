@@ -34,7 +34,7 @@ export default function Navigation() {
               onClick={() => scrollToSection("hero")}
               className="text-xl font-bold text-primary hover:text-accent transition-colors"
             >
-              &lt;Dev /&gt;
+              &lt; Natán Candia /&gt;
             </button>
           </div>
 

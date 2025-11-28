@@ -4,25 +4,19 @@ const socialLinks = [
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:contact@example.com",
+    href: "mailto:portfolio@candia.slmail.me",
     color: "hover:text-primary",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/encandia/",
     color: "hover:text-primary",
   },
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com",
-    color: "hover:text-primary",
-  },
-  {
-    icon: Twitter,
-    label: "Twitter",
-    href: "https://twitter.com",
+    href: "https://github.com/candiath",
     color: "hover:text-primary",
   },
 ];
