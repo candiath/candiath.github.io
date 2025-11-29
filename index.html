@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /> -->
-    <title>portfolio</title>
+    <link rel="stylesheet" href="/noscript.css" />
+    <link rel="stylesheet" href="/loading-screen.css" />
+    <title>Candia Natán - Portfolio</title>
   </head>
+  <!-- Qué haces? No hay nada que ver acá... no, en serio -->
   <body>
+    <noscript>
+      <div id="noscript-warning">
+        <h1>⚠️ JavaScript requerido</h1>
+        <p>
+          Este sitio necesita JavaScript para funcionar correctamente.
+          Por favor, habilita JavaScript en tu navegador para ver el contenido.
+        </p>
+      </div>
+    </noscript>
+    <div id="loading-screen">
+      <div class="spinner"></div>
+      <p class="loading-text">Cargando...</p>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
