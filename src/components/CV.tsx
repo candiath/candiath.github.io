@@ -27,7 +27,7 @@ export const CV = () => {
             href="/cv-portfolio.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer min-w-64 hover:shadow-lg hover:shadow-primary/50"
+            className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer min-w-64 hover:shadow-lg hover:shadow-primary/50 hover:scale-105"
           >
             <FileText size={22} />
             Ver en el navegador

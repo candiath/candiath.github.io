@@ -41,7 +41,7 @@ export const Contact = () => {
             <Mail size={20} />
             Enviar un correo
           </a>
-          <a href="https://www.linkedin.com/in/encandia/" className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+          <a href="https://www.linkedin.com/in/encandia/" className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer hover:scale-105">
             <Linkedin size={20} />
             Conectemos en LinkedIn
           </a>
@@ -53,7 +53,7 @@ export const Contact = () => {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-12 h-12 flex items-center justify-center bg-card border border-border rounded-full transition-all duration-300 ${link.color} hover:border-primary`}
+            className={`w-12 h-12 flex items-center justify-center bg-card border border-border rounded-full transition-all duration-300 ${link.color} hover:border-primary hover:shadow-lg hover:shadow-primary/50`}
               >
               <link.icon size={20}/>
             </a>
