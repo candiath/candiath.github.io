@@ -29,11 +29,11 @@ export const Contact = () => {
         </h2>
 
         <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-          Estoy disponible para proyectos freelance y colaboraciones. No dudes
+          Estoy disponible para trabajos fulltime, proyectos freelance y colaboraciones. No dudes
           en contactarme a través de cualquiera de las siguientes plataformas:
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center mb-12">
+        <div className="flex flex-col sm:flex-row justify-center mb-12 gap-4">
           <a
             href={`mailto:${email}`}
             className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-accent transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2 cursor-pointer"
