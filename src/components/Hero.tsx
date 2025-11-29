@@ -58,7 +58,7 @@ export const Hero = () => {
             className="cursor-pointer px-8 py-3 border-2 text-primary border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             onClick={() => {scrollToSection('cv')}}
             >
-            <span className="font-semibold text-foreground">Ver CV</span>
+            <span className="font-semibold text-primary ">Ver CV</span>
           </button>
 
         </div>
