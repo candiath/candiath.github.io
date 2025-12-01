@@ -42,36 +42,29 @@ export const Experience = () => {
           </h2>
 
           <div className="grid mb-6 gap-12 md:gap-8 lg:gap-16 md:grid-cols-1">
-            {/* TODO: convert to FC */}
-
-
-            {/* Courses */}
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-8">Cursos</h3>
-              <div className="space-y-6">
-                {courses.map((edu, index) => (
-                  <div
-                    key={index}
-                    className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"
-                  >
-                    <div className="absolute -left-3 -top-1 w-4 h-4 bg-accent rounded-full border-4 border-background"></div>
-                    <p className="text-sm text-accent font-semibold mb-1">
-                      {edu.year}
-                    </p>
-                    <a
-                      href={edu.certificate}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xl font-bold text-foreground mb-1 hover:underline"
-                    >
-                      {edu.title}
-                    </a>
-                    <p className="text-muted-foreground text-sm">
-                      {edu.organization}
-                    </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              {courses.map((course, index) => (
+                <a
+                  key={index}
+                  href={course.certificate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-6 border-2 border-accent/20 rounded-lg hover:border-accent hover:shadow-lg transition-all duration-300 bg-card w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                >
+                  <p className="text-xs text-accent font-semibold mb-3">
+                    {course.year}
+                  </p>
+                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {course.title}
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    {course.organization}
+                  </p>
+                  <div className="mt-4 text-xs text-accent group-hover:underline">
+                    Ver certificado →
                   </div>
-                ))}
-              </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
