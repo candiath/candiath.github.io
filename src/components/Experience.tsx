@@ -75,7 +75,7 @@ export const Experience = () => {
           </div>
 
           {/* Education */}
-          <div className="ml-10">
+          <div className="sm:ml-10">
             <h3 className="text-2xl font-bold text-primary mb-8">
               Formación académica
             </h3>
