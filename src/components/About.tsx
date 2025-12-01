@@ -1,5 +1,23 @@
+import { useEffect, useState } from "react"
 
 export const About = () => {
+  const [shouldShowImage, setShouldShowImage] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setShouldShowImage(true)
+      } else {
+        setShouldShowImage(false)
+      }
+    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
       <div className="max-w-6xl mx-auto">
@@ -21,15 +39,18 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="hidden md:flex items-center justify-center slide-up">
-            <div className="">
-              <img
-                src="https://avatars.githubusercontent.com/u/55251304?v=4"
-                alt="About me"
-                className="rounded-4xl object-cover"
-              />
+          {shouldShowImage && (
+            <div className="hidden md:flex items-center justify-center slide-up">
+              <div>
+                <img
+                  src="https://avatars.githubusercontent.com/u/55251304?v=4"
+                  alt="About me"
+                  loading="lazy"
+                  className="rounded-4xl object-cover"
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>
