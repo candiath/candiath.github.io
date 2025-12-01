@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { Spinner } from "./components/ui/Spinner";
 
 import { Hero } from "./components/Hero";
@@ -11,6 +11,37 @@ const CV = lazy(() => import("./components/CV").then(m => ({ default: m.CV })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
+function LazyContent() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (loaded && window.location.hash) {
+      const hash = window.location.hash;
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 50);
+    }
+  }, [loaded]);
+
+  return (
+    <>
+      <About />
+      <Projects />
+      <Experience />
+      <Courses />
+      <CV />
+      <Contact />
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -19,13 +50,7 @@ function App() {
         <Navigation />
 
       <Suspense fallback={<Spinner />}>
-        <About />
-        <Projects />
-        <Experience />
-        <Courses />
-        <CV />
-        <Contact />
-        <Footer />
+        <LazyContent />
       </Suspense>
     </>
   );

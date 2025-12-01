@@ -1,3 +1,5 @@
+import { ExternalLink } from "lucide-react";
+
 const courses = [
   {
     year: "2025",
@@ -49,7 +51,7 @@ export const Experience = () => {
                   href={course.certificate}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group p-6 border-2 border-accent/20 rounded-lg hover:border-accent hover:shadow-lg transition-all duration-300 bg-card w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                  className="group p-6 border-2 border-accent/20 rounded-lg hover:border-accent hover:shadow-lg transition-all duration-300 bg-card w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] hover:shadow-primary/50"
                 >
                   <p className="text-xs text-accent font-semibold mb-3">
                     {course.year}
@@ -60,8 +62,8 @@ export const Experience = () => {
                   <p className="text-muted-foreground text-sm">
                     {course.organization}
                   </p>
-                  <div className="mt-4 text-xs text-accent group-hover:underline">
-                    Ver certificado →
+                  <div className="mt-4 text-xs text-accent group-hover:underline flex items-center gap-1">
+                    Ver certificado <ExternalLink size={14} />
                   </div>
                 </a>
               ))}
