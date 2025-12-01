@@ -6,12 +6,20 @@ import { Menu, X } from "lucide-react"
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth" })
-    window.history.pushState(null, "", `#${id}`)
-    setIsOpen(false)
-  }
+  const scrollToSection = (id?: string) => {
+    if (!id) {
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsOpen(false);
+      window.history.replaceState(null, "", `/`);
+      return;
+    }
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+    // Limpiar cualquier pathname y usar solo hash
+    window.history.replaceState(null, "", `/${id}`);
+    setIsOpen(false);
+  };
 
   const navLinks = [
     { label: "Sobre mí", id: "about" },
@@ -28,7 +36,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           <div className="shrink-0">
             <button
-              onClick={() => scrollToSection("hero")}
+              onClick={() => scrollToSection()}
               className="text-xl font-bold text-primary hover:text-accent transition-colors"
             >
               &lt; Natán Candia /&gt;

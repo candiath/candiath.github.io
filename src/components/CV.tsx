@@ -1,4 +1,5 @@
 import { Download, FileText } from "lucide-react";
+import { CV_HASH } from "../generated/cv-hash";
 
 export const CV = () => {
   return (
@@ -15,7 +16,7 @@ export const CV = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="/cv-portfolio.pdf"
+            href={`/cv-portfolio.pdf?v=${CV_HASH}`}
             download="CV-Natan-Candia.pdf"
             className="group px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-accent transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-3 cursor-pointer min-w-64"
           >
@@ -24,7 +25,7 @@ export const CV = () => {
           </a>
 
           <a
-            href="/cv-portfolio.pdf"
+            href={`/cv-portfolio.pdf?v=${CV_HASH}`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer min-w-64 hover:shadow-lg hover:shadow-primary/50 hover:scale-105"
