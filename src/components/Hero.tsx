@@ -20,6 +20,7 @@ export const Hero = () => {
               <img
                 src="/profile.jpg"
                 alt="Natán Candia"
+                loading="eager"
                 className="w-full h-full object-cover scale-120 transform transition-transform duration-500 group-hover:scale-[1.65]"
               />
             </div>
