@@ -33,7 +33,6 @@ export default function Navigation() {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <button
@@ -46,7 +45,6 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-foreground hover:text-primary transition-colors">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -54,7 +52,6 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             {navLinks.map((link) => (

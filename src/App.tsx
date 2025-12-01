@@ -14,15 +14,25 @@ const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.
 function App() {
   return (
     <>
-        <Hero />
-        <Navigation />
+      <Hero />
+      <Navigation />
 
       <Suspense fallback={<Spinner />}>
         <About />
+      </Suspense>
+      <Suspense fallback={<Spinner />}>
         <Projects />
+      </Suspense>
+      <Suspense fallback={<Spinner />}>
         <Experience />
+      </Suspense>
+      <Suspense fallback={<Spinner />}>
         <CV />
+      </Suspense>
+      <Suspense fallback={<Spinner />}>
         <Contact />
+      </Suspense>
+      <Suspense fallback={<Spinner />}>
         <Footer />
       </Suspense>
     </>

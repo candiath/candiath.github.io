@@ -76,9 +76,9 @@ export const Experience = () => {
         </h2>
 
         <div className="grid mb-6 gap-12 md:gap-8 lg:gap-16 md:grid-cols-3">
-          {/* TODO: convert to FC */}
 
-          {/* Education */}
+
+
           <div>
             <h3 className="text-2xl font-bold text-primary mb-8">
               Formación académica
@@ -104,7 +104,7 @@ export const Experience = () => {
             </div>
           </div>
 
-          {/* Courses */}
+
           <div>
             <h3 className="text-2xl font-bold text-primary mb-8">Cursos</h3>
             <div className="space-y-6">
@@ -133,7 +133,7 @@ export const Experience = () => {
             </div>
           </div>
 
-          {/* Experience */}
+
           <div>
             <h3 className="text-2xl font-bold text-primary mb-8">
               Experiencia
