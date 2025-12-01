@@ -3,7 +3,6 @@ export const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
-    // setIsOpen(false);
   };
 
   return (
@@ -11,9 +10,7 @@ export const Hero = () => {
       id="hero"
       className="min-h-screen flex items-center justify-center"
     >
-      {/* Contenedor principal - ancho máximo y centrado */}
       <div className="text-center">
-        {/* Avatar circular */}
         <div className="w-50 h-50 mx-auto m-8 rounded-full border-2 border-primary/30 flex items-center justify-center fade-in mt-20">
           <span className="text-6xl block w-full h-full">
             <div className="w-full h-full overflow-hidden rounded-full group">
@@ -31,22 +28,16 @@ export const Hero = () => {
           <span className="text-foreground">Natán Candia</span>
         </h1>
 
-
-        {/* Título principal */}
         <h1 className="text-4xl font-bold m-2">
           <span className="text-primary">FullStack Developer</span>
           <br />
-          {/* <span className="text-primary">Node.js • Express • React</span> */}
         </h1>
-
-        {/* Descripción */}
         <p className="text-lg mt-4 text-muted-foreground mb-8 max-w-2xl mx-auto">
           Músico, amante de los animales y del aprendizaje continuo. Construyo soluciones backend robustas
           y escalables. Especializado en arquitecturas de microservicios, APIs
           REST y bases de datos SQL.
         </p>
 
-        {/* Botones */}
         <div className="flex gap-4 justify-center ">
           <button
             onClick={() => scrollToSection("projects")}
@@ -74,7 +65,6 @@ export const Hero = () => {
 
         </div>
 
-        {/* Tecnologías */}
         <div className="flex flex-wrap justify-center gap-4 mt-15">
           {[
             "React",
@@ -92,7 +82,6 @@ export const Hero = () => {
             "Render",
             "Vercel",
           ].map((item) => (
-            // className="px-4 py-2 bg-card border border-border rounded-full text-sm text-foreground hover:border-primary transition-colors"
             <span
               key={item}
               className="px-4 py-2 border rounded-full hover:border-primary"
