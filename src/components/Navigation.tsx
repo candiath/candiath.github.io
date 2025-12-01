@@ -9,6 +9,7 @@ export default function Navigation() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     element?.scrollIntoView({ behavior: "smooth" })
+    window.history.pushState(null, "", `#${id}`)
     setIsOpen(false)
   }
 
