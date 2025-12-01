@@ -19,14 +19,33 @@ function LazyContent() {
   }, []);
 
   useEffect(() => {
-    if (loaded && window.location.hash) {
-      const hash = window.location.hash;
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 50);
+    if (loaded) {
+      // Handle redirects from 404 page
+      const redirectPath = sessionStorage.getItem('redirectPath');
+      if (redirectPath && redirectPath !== '/') {
+        sessionStorage.removeItem('redirectPath');
+        const section = redirectPath.slice(1);
+        window.history.replaceState(null, '', `/${section}`);
+        setTimeout(() => {
+          const element = document.getElementById(section);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 50);
+        return;
+      }
+
+      // Handle direct pathname (development)
+      const pathname = window.location.pathname;
+      if (pathname && pathname !== '/') {
+        const section = pathname.slice(1);
+        setTimeout(() => {
+          const element = document.getElementById(section);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 50);
+      }
     }
   }, [loaded]);
 

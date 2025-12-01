@@ -33,17 +33,28 @@ export default defineConfig({
       }
     },
     {
-      name: 'redirect-handler',
+      name: 'spa-fallback',
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
-          // Conf para manejar redirects desde public/
           if (req.url) {
+            // Manejar redirects especiales desde public/ (como /linkedin)
             const redirectPath = path.join(__dirname, 'public', req.url, 'index.html')
             if (fs.existsSync(redirectPath) && req.url !== '/') {
               const content = fs.readFileSync(redirectPath, 'utf-8')
               res.setHeader('Content-Type', 'text/html')
               res.end(content)
               return
+            }
+            
+            // Para rutas SPA: servir index.html y dejar que el cliente maneje el hash
+            const cleanUrl = req.url.split('?')[0].split('#')[0]
+            const isAsset = cleanUrl.includes('.') || cleanUrl.startsWith('/@') || cleanUrl.startsWith('/src/')
+            const publicFileExists = fs.existsSync(path.join(__dirname, 'public', cleanUrl))
+            
+            if (!isAsset && cleanUrl !== '/' && !publicFileExists) {
+              // Para rutas SPA, dejar que Vite maneje normalmente
+              // Esto hara que Vite sirva el index.html con el middleware interno
+              req.url = '/'
             }
           }
           next()
