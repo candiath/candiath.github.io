@@ -1,14 +1,28 @@
 export const Hero = () => {
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
+    // Primero intentar buscar por ID
+    let element = document.getElementById(id);
+    
+    // Si no se encuentra, buscar por alias
+    if (!element) {
+      const allSections = document.querySelectorAll('[data-section-aliases]');
+      for (const section of allSections) {
+        const aliases = section.getAttribute('data-section-aliases')?.split(',') || [];
+        if (aliases.includes(id)) {
+          element = section as HTMLElement;
+          break;
+        }
+      }
+    }
+    
     element?.scrollIntoView({ behavior: "smooth" });
-    // setIsOpen(false);
   };
 
   return (
     <section
       id="hero"
+      data-section-aliases="inicio,home"
       className="min-h-screen flex items-center justify-center"
     >
       {/* Contenedor principal - ancho máximo y centrado */}

@@ -20,7 +20,7 @@ const projects = [
   ]
 export const Projects = () => {
   return (
-    <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects">
+    <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects" data-section-aliases="proyectos">
       <div>
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance">
           Proyectos <span className="text-primary">Destacados</span>

@@ -37,7 +37,7 @@ const courses = [
 export const Experience = () => {
   return (
     <>
-      <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
+      <section id="courses" data-section-aliases="cursos,certificados,certificaciones" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance">
             Cursos y <span className="text-primary">Certificaciones</span>
