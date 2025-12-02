@@ -1,23 +1,15 @@
+import { GetSectionElement } from "../helpers/GetSectionElement.helper";
+
 export const Hero = () => {
 
   const scrollToSection = (id: string) => {
-    // Primero intentar buscar por ID
-    let element = document.getElementById(id);
-    
-    // Si no se encuentra, buscar por alias
-    if (!element) {
-      const allSections = document.querySelectorAll('[data-section-aliases]');
-      for (const section of allSections) {
-        const aliases = section.getAttribute('data-section-aliases')?.split(',') || [];
-        if (aliases.includes(id)) {
-          element = section as HTMLElement;
-          break;
-        }
-      }
-    }
-    
-    element?.scrollIntoView({ behavior: "smooth" });
+    console.log("first")
+    let element = GetSectionElement(id)
+    if ( element ) element.scrollIntoView({ behavior: "smooth" });
+    window.history.replaceState(null, "", `/${id}`);
   };
+
+
 
   return (
     <section
