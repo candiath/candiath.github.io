@@ -24,12 +24,12 @@ export default function Navigation() {
   };
 
   const navLinks = [
-    { label: "Sobre mí", id: "about" },
     { label: "Proyectos", id: "projects" },
     { label: "Experiencia y Formación", id: "experience" },
     { label: "Cursos y Certificados", id: "courses" },
     { label: "CV", id: "cv" },
     { label: "Contacto", id: "contact" },
+    { label: "Sobre mí", id: "about" },
   ]
 
   return (

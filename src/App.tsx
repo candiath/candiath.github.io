@@ -11,7 +11,7 @@ const CV = lazy(() => import("./components/CV").then(m => ({ default: m.CV })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
-function LazyContent() {
+const LazyContent = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -71,18 +71,18 @@ function LazyContent() {
 
   return (
     <>
-      <About />
       <Projects />
       <Experience />
       <Courses />
       <CV />
       <Contact />
+      <About />
       <Footer />
     </>
   );
 }
 
-function App() {
+const App = () => {
   return (
     <>
         <Hero />
