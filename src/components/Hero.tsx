@@ -1,14 +1,20 @@
+import { GetSectionElement } from "../helpers/GetSectionElement.helper";
+
 export const Hero = () => {
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-    // setIsOpen(false);
+    console.log("first")
+    let element = GetSectionElement(id)
+    if ( element ) element.scrollIntoView({ behavior: "smooth" });
+    window.history.replaceState(null, "", `/${id}`);
   };
+
+
 
   return (
     <section
       id="hero"
+      data-section-aliases="inicio,home"
       className="min-h-screen flex items-center justify-center"
     >
       {/* Contenedor principal - ancho máximo y centrado */}

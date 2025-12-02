@@ -20,6 +20,26 @@ function LazyContent() {
 
   useEffect(() => {
     if (loaded) {
+      // Función para buscar elemento por ID o alias
+      const findSectionElement = (sectionId: string): HTMLElement | null => {
+        // Primero intentar buscar por ID
+        let element = document.getElementById(sectionId);
+        
+        // Si no se encuentra, buscar por alias
+        if (!element) {
+          const allSections = document.querySelectorAll('[data-section-aliases]');
+          for (const section of allSections) {
+            const aliases = section.getAttribute('data-section-aliases')?.split(',') || [];
+            if (aliases.includes(sectionId)) {
+              element = section as HTMLElement;
+              break;
+            }
+          }
+        }
+        
+        return element;
+      };
+
       // Handle redirects from 404 page
       const redirectPath = sessionStorage.getItem('redirectPath');
       if (redirectPath && redirectPath !== '/') {
@@ -27,7 +47,7 @@ function LazyContent() {
         const section = redirectPath.slice(1);
         window.history.replaceState(null, '', `/${section}`);
         setTimeout(() => {
-          const element = document.getElementById(section);
+          const element = findSectionElement(section);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
@@ -40,7 +60,7 @@ function LazyContent() {
       if (pathname && pathname !== '/') {
         const section = pathname.slice(1);
         setTimeout(() => {
-          const element = document.getElementById(section);
+          const element = findSectionElement(section);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }

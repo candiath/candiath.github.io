@@ -2,20 +2,22 @@
 
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { GetSectionElement } from "../helpers/GetSectionElement.helper";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const scrollToSection = (id?: string) => {
     if (!id) {
-      // Scroll to top
       window.scrollTo({ top: 0, behavior: "smooth" });
       setIsOpen(false);
       window.history.replaceState(null, "", `/`);
       return;
     }
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    
+    let element = GetSectionElement(id)
+    if ( element ) element.scrollIntoView({ behavior: "smooth" });
+    
     // Limpiar cualquier pathname y usar solo hash
     window.history.replaceState(null, "", `/${id}`);
     setIsOpen(false);
