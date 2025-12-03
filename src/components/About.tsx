@@ -3,7 +3,7 @@ export const About = () => {
   return (
     <section id="about" data-section-aliases="sobre-mi,aboutme" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50 lg:pb-40">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
           Sobre <span className="text-primary">Mí</span>
         </h2>
 

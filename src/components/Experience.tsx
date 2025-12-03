@@ -38,7 +38,7 @@ export const Experience = () => {
   return (
     <section id="experience" data-section-aliases="experiencia,experiencia-y-formacion,formacion,formación" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
           Experiencia y <span className="text-primary">Formación</span>
         </h2>
 

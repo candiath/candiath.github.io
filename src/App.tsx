@@ -85,9 +85,8 @@ const LazyContent = () => {
 const App = () => {
   return (
     <>
-        <Hero />
-        <Navigation />
-
+      <Navigation />
+      <Hero />
       <Suspense fallback={<Spinner />}>
         <LazyContent />
       </Suspense>

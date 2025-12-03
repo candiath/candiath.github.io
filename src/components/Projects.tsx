@@ -22,10 +22,10 @@ export const Projects = () => {
   return (
     <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects" data-section-aliases="proyectos">
       <div>
-        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
           Proyectos <span className="text-primary">Destacados</span>
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 py-10">
           {
             projects.map( (project, index) => (
               <div key={index} className="group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary">

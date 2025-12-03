@@ -3,7 +3,6 @@ import { GetSectionElement } from "../helpers/GetSectionElement.helper";
 export const Hero = () => {
 
   const scrollToSection = (id: string) => {
-    console.log("first")
     let element = GetSectionElement(id)
     if ( element ) element.scrollIntoView({ behavior: "smooth" });
     window.history.replaceState(null, "", `/${id}`);
@@ -17,9 +16,9 @@ export const Hero = () => {
       data-section-aliases="inicio,home"
       className="min-h-screen flex items-center justify-center"
     >
-      {/* Contenedor principal - ancho máximo y centrado */}
+      {/* Contenedor principal  */}
       <div className="text-center">
-        {/* Avatar circular */}
+        {/* Avatar */}
         <div className="w-50 h-50 mx-auto m-8 rounded-full border-2 border-primary/30 flex items-center justify-center fade-in mt-20">
           <span className="text-6xl block w-full h-full">
             <div className="w-full h-full overflow-hidden rounded-full group">
@@ -41,7 +40,6 @@ export const Hero = () => {
         <h1 className="text-4xl font-bold m-2">
           <span className="text-primary">FullStack Developer</span>
           <br />
-          {/* <span className="text-primary">Node.js • Express • React</span> */}
         </h1>
 
         {/* Descripción */}
@@ -61,10 +59,10 @@ export const Hero = () => {
           </button>
 
           <button 
-            className="cursor-pointer px-8 py-3 border-2 text-primary border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="cursor-pointer px-8 py-3 border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             onClick={() => {scrollToSection('cv')}}
             >
-            <span className="font-semibold text-primary ">Ver CV</span>
+            <span className="font-semibold text-primary-foreground ">Ver CV</span>
           </button>
 
         </div>
@@ -79,7 +77,6 @@ export const Hero = () => {
 
         </div>
 
-        {/* Tecnologías */}
         <div className="flex flex-wrap justify-center gap-4 mt-15">
           {[
             "React",
@@ -97,7 +94,6 @@ export const Hero = () => {
             "Render",
             "Vercel",
           ].map((item) => (
-            // className="px-4 py-2 bg-card border border-border rounded-full text-sm text-foreground hover:border-primary transition-colors"
             <span
               key={item}
               className="px-4 py-2 border rounded-full hover:border-primary"
