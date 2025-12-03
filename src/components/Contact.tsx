@@ -24,7 +24,7 @@ export const Contact = () => {
   return (
     <section id="contact" data-section-aliases="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-balance">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-balance section-title">
           ¿Hablamos de tu <span className="text-primary">proyecto</span>?
         </h2>
 
