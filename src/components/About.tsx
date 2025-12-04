@@ -1,7 +1,10 @@
-
 export const About = () => {
   return (
-    <section id="about" data-section-aliases="sobre-mi,aboutme" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50 lg:pb-40">
+    <section
+      id="about"
+      data-section-aliases="sobre-mi,aboutme"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50 lg:pb-40"
+    >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
           Sobre <span className="text-primary">Mí</span>
@@ -10,14 +13,27 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="slide-up">
             <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Desarrollador backend especializado en Node.js y Express, enfocado en construir APIs REST seguras, escalables y bien documentadas. Experiencia con bases de datos relacionales (PostgreSQL/MySQL) y NoSQL (MongoDB), optimizando modelos, índices y rendimiento. Aplico buenas prácticas de desarrollo: validación, manejo de errores, autenticación/autorización, testing, logging y observabilidad. Me caracteriza el aprendizaje continuo, la adaptación y la resolución de problemas. Busco aportar en proyectos desafiantes con soluciones robustas que generen impacto.
+              Hola, soy Natán. Me gusta construir software que resuelva
+              problemas reales y que se sienta prolijo, claro y mantenible.
+              Disfruto mucho del proceso, entender qué hace falta, pensar una
+              solución simple y llevarla a algo que funcione bien.
             </p>
-
             <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Fuera del código, soy músico y disfruto mucho de la creatividad a través de la música. También me apasionan los animales y pasar tiempo con ellos.
+              Me mueve la curiosidad y el aprendizaje continuo. Siempre estoy
+              explorando nuevas ideas, herramientas o formas de hacer mejor las
+              cosas. Me siento cómodo adaptándome, preguntando, investigando y
+              rompiendo lo que haga falta para entenderlo.
             </p>
-            <p className="text-lg text-foreground leading-relaxed">
-              Siempre estoy abierto a nuevas oportunidades y colaboraciones que me permitan aportar valor y crecer profesionalmente.
+            <p className="text-lg text-foreground mb-6 leading-relaxed">
+              Fuera del código, soy músico desde chico. La música me ayuda a
+              mantenerme creativo, a bajar un cambio y a ver las cosas desde
+              otro lugar. También me encantan los animales; jugar con
+              "Clarita" siempre me recarga las pilas.
+            </p>
+            <p className="text-lg text-foreground mb-6 leading-relaxed">
+              Busco proyectos y oportunidades donde pueda aportar valor de
+              verdad, trabajar con buena gente y seguir creciendo tanto técnica
+              como personalmente.
             </p>
           </div>
 
@@ -33,5 +49,5 @@ export const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

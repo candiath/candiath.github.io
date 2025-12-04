@@ -10,8 +10,7 @@ export const CV = () => {
         </h2>
 
         <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-          Descarga mi CV completo para conocer más detalles sobre mi experiencia,
-          formación y habilidades técnicas.
+          Descarga un resumen profesional en formato PDF
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
