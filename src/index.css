@@ -163,3 +163,11 @@ html {
 .section-title{
   margin-top: 2.5rem;
 }
+
+.icon-easter-egg::before{
+  content: "♥";
+}
+.icon-easter-egg:hover::before{
+  content: "♫";
+}
+  

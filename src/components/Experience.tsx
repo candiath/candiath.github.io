@@ -1,10 +1,12 @@
+import { ExternalLink } from "lucide-react";
+
 const experience = [
   {
     period: "junio 2025 - Presente",
-    title: "Portal CLINEX",
-    company: "CLINEX",
+    title: "CLINEX",
+    company: "Desarrollo independiente",
     description:
-      "Sitio web y panel de administración para un sistema de gestión clínica distribuida con soporte para múltiples sedes. Permite gestionar pacientes, turnos y profesionales, visualizar métricas y reportes, y administrar permisos y configuraciones desde una interfaz segura, escalable y optimizada para flujo de trabajo clínico.",
+      "Sitio web y panel de administración (en construcción) para un sistema de gestión clínica distribuida con soporte para múltiples sedes. Permite gestionar pacientes, turnos y profesionales, visualizar métricas y reportes, y administrar permisos y configuraciones desde una interfaz segura, escalable y optimizada para flujo de trabajo clínico.",
   },
   {
     period: "marzo 2025 - abril 2025",
@@ -12,6 +14,7 @@ const experience = [
     company: "Kinecandia",
     description:
       "Landing page enfocada en conversión para una kinesióloga y fisiatra: presenta servicios, perfil profesional y testimonios, incluye formulario de contacto y llamadas a la acción, y está diseñada responsive y optimizada para velocidad.",
+    url: "https://kinecandia.netlify.app/",
   },
 ];
 
@@ -61,7 +64,23 @@ export const Experience = () => {
                     {exp.period}
                   </p>
                   <h4 className="text-xl font-bold text-foreground mb-1">
-                    {exp.title}
+                    {
+                      exp.url ? (
+                        <a
+                          href={exp.url}
+                          className="hover:underline flex items-center gap-1"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <>
+                            {exp.title}
+                            <ExternalLink size={18} />
+                          </>
+                        </a>
+                      ) : (
+                        exp.title
+                      )
+                    }
                   </h4>
                   <p className="text-primary/80 font-medium mb-2">
                     {exp.company}
