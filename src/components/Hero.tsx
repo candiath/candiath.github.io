@@ -1,14 +1,31 @@
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
 
-export const Hero = () => {
+const technologies = [
+  "React",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "PostgreSQL",
+  "JWT",
+  "Jest",
+  "Vite",
+  "Tailwind CSS",
+  "Docker",
+  "Git",
+  "GitHub",
+  "Javascript",
+  "TypeScript",
+  "Netlify",
+  "Render",
+  "Vercel",
+];
 
+export const Hero = () => {
   const scrollToSection = (id: string) => {
-    let element = GetSectionElement(id)
-    if ( element ) element.scrollIntoView({ behavior: "smooth" });
+    let element = GetSectionElement(id);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
     window.history.replaceState(null, "", `/${id}`);
   };
-
-
 
   return (
     <section
@@ -35,7 +52,6 @@ export const Hero = () => {
           <span className="text-foreground">Natán Candia</span>
         </h1>
 
-
         {/* Título principal */}
         <h1 className="text-4xl font-bold m-2">
           <span className="text-primary">FullStack Developer</span>
@@ -44,9 +60,9 @@ export const Hero = () => {
 
         {/* Descripción */}
         <p className="text-lg mt-4 text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Músico, amante de los animales y del aprendizaje continuo. Construyo soluciones backend robustas
-          y escalables. Especializado en arquitecturas de microservicios, APIs
-          REST y bases de datos SQL.
+          Músico, amante de los animales y del aprendizaje continuo. Construyo
+          soluciones backend robustas y escalables. Especializado en
+          arquitecturas de microservicios, APIs REST y bases de datos SQL.
         </p>
 
         {/* Botones */}
@@ -58,45 +74,21 @@ export const Hero = () => {
             Ver Proyectos
           </button>
 
-          <button 
-            className="cursor-pointer px-8 py-3 border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:shadow-lg"
-            onClick={() => {scrollToSection('cv')}}
-            >
-            <span className="font-semibold text-primary-foreground ">Ver CV</span>
-          </button>
-
-        </div>
-
-        <div className="mt-6 flex justify-center">
           <button
-            onClick={() => scrollToSection("contact")}
-            className="cursor-pointer px-8 py-3 border-2 text-primary-foreground rounded-lg font-semibold hover:scale-105 transition-all duration-300 hover:shadow-lg"
+            className="cursor-pointer px-8 py-3 border-2 border-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            onClick={() => {
+              scrollToSection("cv");
+            }}
           >
-            Contacto
+            <span className="font-semibold text-primary ">Ver CV</span>
           </button>
-
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mt-15">
-          {[
-            "React",
-            "Node.js",
-            "Express",
-            "MongoDB",
-            "PostgreSQL",
-            "JWT",
-            "Docker",
-            "Git",
-            "GitHub",
-            "Javascript",
-            "TypeScript",
-            "Netlify",
-            "Render",
-            "Vercel",
-          ].map((item) => (
+        <div className="flex flex-wrap justify-center gap-4 mt-15 max-w-6xl mx-auto">
+          {technologies.map((item) => (
             <span
               key={item}
-              className="px-4 py-2 border rounded-full hover:border-primary"
+              className="px-4 py-2 border rounded-full hover:border-primary duration-300 transition-all text-sm text-muted-foreground hover:text-foreground cursor-default"
             >
               {item}
             </span>
