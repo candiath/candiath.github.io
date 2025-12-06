@@ -21,4 +21,3 @@ export const socialLinks = [
     color: "hover:text-primary",
   },
 ];
-export default socialLinks;
