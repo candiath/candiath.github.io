@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "CLINEX",
     description:
-      "Sistema distribuído de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend. ",
+      "Sistema distribuido de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend. ",
     technologies: ["Node.js", "Express", "Redis", "MySQL", "JWT", "Jest", "Clean Architecture", "Docker"],
     repo: "https://github.com/candiath/clinex",
   },
