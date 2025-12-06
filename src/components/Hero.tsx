@@ -1,24 +1,6 @@
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
+import { technologies } from "@/data/technologies";
 
-const technologies = [
-  "React",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "PostgreSQL",
-  "JWT",
-  "Jest",
-  "Vite",
-  "Tailwind CSS",
-  "Docker",
-  "Git",
-  "GitHub",
-  "Javascript",
-  "TypeScript",
-  "Netlify",
-  "Render",
-  "Vercel",
-];
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
