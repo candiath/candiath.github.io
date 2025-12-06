@@ -1,6 +1,6 @@
 import { Mail, Linkedin, Github } from "lucide-react";
 import socialLinks from "@/data/socialLinks";
-import { publicEmail } from "../data/contactData";
+import { publicEmail } from "@/data/contactData";
 
 export const Contact = () => {
   return (
