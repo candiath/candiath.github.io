@@ -1,4 +1,4 @@
-const courses = [
+export const courses = [
   {
     year: "2025",
     title: "React: de cero a experto - Edición 2025",
@@ -31,5 +31,3 @@ const courses = [
     certificate: "https://cursos.devtalles.com/certificates/pmxdxglzd0",
   },
 ];
-
-export const courses = courses;

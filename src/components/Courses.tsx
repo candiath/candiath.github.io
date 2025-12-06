@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import courses from "@/data/courses";
+import { courses } from "@/data/courses";
 
 
 export const Experience = () => {
