@@ -14,11 +14,11 @@ export const projects = [
     site: "https://kinecandia.netlify.app/",
     repo: "https://github.com/candiath/kine-landing",
   },
-  {
-    title: "Teslo Shop",
-    description:
-      "E-commerce de productos tecnológicos con funcionalidades completas de carrito de compras, gestión de usuarios y administración de productos, implementado con Next.js y TypeScript.",
-    technologies: ["TypeScript", "React", "Vercel"],
-    repo: "https://github.com/Nath-s-React-Courses/07-teslo-shop",
-  },
+  // {
+  //   title: "Teslo Shop",
+  //   description:
+  //     "E-commerce de productos tecnológicos con funcionalidades completas de carrito de compras, gestión de usuarios y administración de productos, implementado con Next.js y TypeScript.",
+  //   technologies: ["TypeScript", "React", "Vercel"],
+  //   repo: "https://github.com/Nath-s-React-Courses/07-teslo-shop",
+  // },
 ]
