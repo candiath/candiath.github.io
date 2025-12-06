@@ -1,25 +1,7 @@
 import { Mail, Linkedin, Github } from "lucide-react";
-const email = "portfolio@candia.slmail.me";
-const socialLinks = [
-  {
-    icon: Mail,
-    label: "Email",
-    href: `mailto:${email}`,
-    color: "hover:text-primary",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/encandia/",
-    color: "hover:text-primary",
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    href: "https://github.com/candiath",
-    color: "hover:text-primary",
-  },
-];
+import socialLinks from "@/data/socialLinks";
+import { publicEmail } from "@/data/contactData";
+
 export const Contact = () => {
   return (
     <section id="contact" data-section-aliases="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -35,7 +17,7 @@ export const Contact = () => {
 
         <div className="flex flex-col sm:flex-row justify-center mb-12 gap-4">
           <a
-            href={`mailto:${email}`}
+            href={`mailto:${publicEmail}`}
             className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-accent transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2 cursor-pointer"
           >
             <Mail size={20} />

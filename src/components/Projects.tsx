@@ -1,23 +1,6 @@
 import { ExternalLink, Github } from "lucide-react"
+import { projects } from "@/data/projects"
 
-const projects = [
-    {
-      title: "CLINEX",
-      description:
-      "Sistema distribuído de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend. ",
-      technologies: ["Node.js", "Express", "Redis", "MySQL", "JWT", "Jest", "Clean Architecture", "Docker"],
-      repo: "https://github.com/candiath/clinex",
-    },
-    {
-      title: "Landing Page Kinecandia",
-      description:
-      "Landing page para una kinesióloga y fisiatra, que facilita el contacto con  potenciales pacientes y provee una presentación clara de servicios, perfil y testimonios.",
-      technologies: ["Javascript", "CSS", "HTML", "Netlify"],
-      site: "https://kinecandia.netlify.app/",
-      repo: "https://github.com/candiath/kine-landing",
-    
-    },
-  ]
 export const Projects = () => {
   return (
     <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects" data-section-aliases="proyectos">
