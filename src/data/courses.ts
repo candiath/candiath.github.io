@@ -32,4 +32,4 @@ const courses = [
   },
 ];
 
-export default courses;
+export const courses = courses;
