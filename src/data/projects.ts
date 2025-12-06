@@ -20,5 +20,5 @@ export const projects = [
       "E-commerce de productos tecnológicos con funcionalidades completas de carrito de compras, gestión de usuarios y administración de productos, implementado con Next.js y TypeScript.",
     technologies: ["TypeScript", "React", "Vercel"],
     repo: "https://github.com/Nath-s-React-Courses/07-teslo-shop",
-  }
+  },
 ]
