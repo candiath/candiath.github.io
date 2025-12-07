@@ -1,0 +1,1 @@
+export const publicEmail = "portfolio@candia.slmail.me";
