@@ -8,10 +8,10 @@ export const Projects = () => {
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
           Proyectos <span className="text-primary">Destacados</span>
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 py-10">
+        <div className="flex flex-wrap justify-center gap-6 py-10">
           {
             projects.map( (project, index) => (
-              <div key={index} className="group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary">
+              <div key={index} className="group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-500 hover:shadow-lg hover:shadow-primary w-full md:w-[calc(50%-0.75rem)] flex flex-col">
                 <h3 className="">
                   {project.title}
                 </h3>
@@ -23,7 +23,7 @@ export const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-auto">
                   { project.site ? 
                     <a href={project.site} className="flex items-center gap-2 px-4 py-2 text-sm bg-primary text-primary-foreground rounded-lg hover:bg-accent transition-colors">
                       <ExternalLink size={16} />
