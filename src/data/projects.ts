@@ -23,15 +23,19 @@ export const projects = [
   // },
 ]
 
-export const littleProjects = [
-  {
-    title: "React Weather App",
-    description:
-      "Aplicación web que consume una API de clima para mostrar el pronóstico del tiempo en diferentes ciudades, utilizando React para la interfaz de usuario.",
-    technologies: ["JavaScript", "React", "CSS", "OpenWeatherMap API"],
-    repo: "https://github.com/candiath/react-weather-app",
-    site: "https://react-weather-app-candiath.netlify.app/",
-  },
+interface MiniApp {
+  title: string;
+  description: string;
+  technologies: string[];
+  repo?: string;
+  site?: string;
+  image?: string;
+}
+
+const baseUrl = "https://pub-d0c86d895d3c4cd0a01395f46da20762.r2.dev/"
+
+export const miniApps: MiniApp[] = [
+  
   {
     title: "Buscador de gifs con Giphy API",
     description:
@@ -39,21 +43,24 @@ export const littleProjects = [
     technologies: ["JavaScript", "React", "CSS", ],
     repo: "",
     site: "https://nath-s-giphy-search.netlify.app/",
+    image: `${baseUrl}giphy-search.netlify.app.png`,
   },
   {
     title: "TODO app",
     description:
-      "Aplicación web para gestionar tareas pendientes, utilizando Javascript para la interfaz de usuario.",
+    "Aplicación web para gestionar tareas pendientes, utilizando Javascript para la interfaz de usuario.",
     technologies: ["JavaScript", "CSS"],
-    repo: "",
+    repo: "https://github.com/candiath/05-todo-app",
     site: "https://naths-todo-app.netlify.app/",
+    image: `${baseUrl}todo-app.netlify.app.png`,
   },
   {
     title: "BlackJack",
     description:
-      "Simple juego de BlackJack implementado en JavaScript, donde el jugador puede jugar contra la computadora siguiendo las reglas clásicas del juego.",
+    "Simple juego de BlackJack implementado en JavaScript, donde el jugador puede jugar contra la computadora siguiendo las reglas clásicas del juego.",
     technologies: ["JavaScript", "CSS", "HTML"],
-    repo: "",
+    repo: "https://github.com/candiath/js-vite-blackjack",
     site: "https://naths-blackjack.netlify.app/",
+    image: `${baseUrl}blackjack.netlify.app.png`,
   },
 ]

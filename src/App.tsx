@@ -5,7 +5,7 @@ import { Hero } from "./components/Hero";
 import Navigation from "./components/Navigation";
 const About = lazy(() => import("./components/About").then(m => ({ default: m.About })));
 const Projects = lazy(() => import("./components/Projects").then(m => ({ default: m.Projects })));
-const LittleProjects = lazy(() => import("./components/LittleProjects").then(m => ({ default: m.LittleProjects })));
+const MiniApps = lazy(() => import("./components/MiniApps").then(m => ({ default: m.MiniApps })));
 const Experience = lazy(() => import("./components/Experience").then(m => ({ default: m.Experience })));
 const Courses = lazy(() => import("./components/Courses").then(m => ({ default: m.Experience })));
 const CV = lazy(() => import("./components/CV").then(m => ({ default: m.CV })));
@@ -73,7 +73,7 @@ const LazyContent = () => {
   return (
     <>
       <Projects />
-      <LittleProjects />
+      <MiniApps />
       <Experience />
       <Courses />
       <CV />
