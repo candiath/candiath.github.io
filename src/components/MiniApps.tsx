@@ -17,7 +17,6 @@ export const MiniApps = () => {
           {miniApps.map((miniProject, index) => (
             <MiniProjectCard
               key={index}
-              index={index}
               title={miniProject.title}
               description={miniProject.description}
               technologies={miniProject.technologies}

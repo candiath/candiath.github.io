@@ -1,7 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 
 interface MiniProjectCardProps {
-  index: number;
   title: string;
   description: string;
   technologies: string[];
@@ -11,7 +10,6 @@ interface MiniProjectCardProps {
 }
 
 export const MiniProjectCard = ({
-  index,
   title,
   description,
   technologies,
@@ -42,7 +40,7 @@ export const MiniProjectCard = ({
           <img
             className="rounded-lg w-full max-h-60  md:min-w-100 object-cover object-top transition-all duration-500 "
             src={image}
-            alt=""
+            alt={`Captura de ${title}`}
           />
           </a>
           )}
@@ -50,7 +48,7 @@ export const MiniProjectCard = ({
 
         <div className="flex flex-wrap gap-2 mb-5">
           {technologies.map((tech) => (
-            <span className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/20">
+            <span key={tech} className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/20">
               {tech}
             </span>
           ))}
@@ -92,7 +90,7 @@ export const MiniProjectCard = ({
           <img
             className="rounded-lg w-full max-h-60  md:w-100 object-cover object-top hover:scale-130 transition-all duration-500 hover:shadow-2xl border-primary/0 hover:border-primary hover:border hover:shadow-primary"
             src={image}
-            alt=""
+            alt={`Captura de ${title}`}
           />
           </a>
         )}
