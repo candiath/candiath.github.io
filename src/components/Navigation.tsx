@@ -25,6 +25,7 @@ export default function Navigation() {
 
   const navLinks = [
     { label: "Proyectos", id: "projects" },
+    { label: "Mini Apps", id: "mini-apps" },
     { label: "Experiencia y Formación", id: "experience" },
     { label: "Cursos y Certificados", id: "courses" },
     { label: "CV", id: "cv" },

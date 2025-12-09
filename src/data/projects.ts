@@ -17,8 +17,58 @@ export const projects = [
   // {
   //   title: "Teslo Shop",
   //   description:
-  //     "E-commerce de productos tecnológicos con funcionalidades completas de carrito de compras, gestión de usuarios y administración de productos, implementado con Next.js y TypeScript.",
+  //     "FrontEnd para un E-commerce inspirado en los estilos de diseño de Tesla con funcionalidades de búsqueda, filtrado y administración de productos, implementado con React y TypeScript.",
   //   technologies: ["TypeScript", "React", "Vercel"],
   //   repo: "https://github.com/Nath-s-React-Courses/07-teslo-shop",
   // },
+]
+
+interface MiniApp {
+  title: string;
+  description: string;
+  technologies: string[];
+  repo?: string;
+  site?: string;
+  image?: string;
+}
+
+const baseUrl = "https://pub-d0c86d895d3c4cd0a01395f46da20762.r2.dev/";
+
+export const miniApps: MiniApp[] = [
+  
+  {
+    title: "Heroes App",
+    description:
+    "Aplicación web que permite buscar y filtrar héroes de cómics utilizando React para la interfaz de usuario.",
+    technologies: ["React", "CSS", "HTML"],
+    repo: "https://github.com/candiath/05-heroes-app",
+    site: "https://naths-heroes-app.netlify.app/",
+    image: `${baseUrl}heroes-app.png`,
+  },
+  {
+    title: "Buscador de gifs con Giphy API",
+    description:
+      "Aplicación web que consume una API de Giphy para mostrar imágenes animadas relacionadas con términos de búsqueda, utilizando React para la interfaz de usuario e implementando técnicas de caché para mejorar el rendimiento y optimizar el consumo de la API.",
+    technologies: ["JavaScript", "React", "CSS"],
+    site: "https://nath-s-giphy-search.netlify.app/",
+    image: `${baseUrl}giphy-search.netlify.app.png`,
+  },
+  {
+    title: "TODO app",
+    description:
+    "Aplicación web para gestionar tareas pendientes, utilizando Javascript para la interfaz de usuario.",
+    technologies: ["JavaScript", "CSS"],
+    repo: "https://github.com/candiath/05-todo-app",
+    site: "https://naths-todo-app.netlify.app/",
+    image: `${baseUrl}todo-app.netlify.app.png`,
+  },
+  {
+    title: "BlackJack",
+    description:
+    "Simple juego de BlackJack implementado en JavaScript, donde el jugador puede jugar contra la computadora siguiendo las reglas clásicas del juego.",
+    technologies: ["JavaScript", "CSS", "HTML"],
+    repo: "https://github.com/candiath/js-vite-blackjack",
+    site: "https://naths-blackjack.netlify.app/",
+    image: `${baseUrl}blackjack.netlify.app.png`,
+  },
 ]
