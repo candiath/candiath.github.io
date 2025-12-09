@@ -22,8 +22,8 @@ export const MiniProjectCard = ({
 }: MiniProjectCardProps) => {
   return (
     <div
-      key={index}
       className="flex flex-col md:flex-row md:min-w-6xl group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-500 hover:shadow-lg hover:shadow-primary w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.33%-1rem)] hover:scale-110"
+      
     >
       <div className="flex flex-col flex-1">
         <h3 className="">{title}</h3>

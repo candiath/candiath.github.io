@@ -32,7 +32,7 @@ interface MiniApp {
   image?: string;
 }
 
-const baseUrl = "https://pub-d0c86d895d3c4cd0a01395f46da20762.r2.dev/"
+const baseUrl = "https://pub-d0c86d895d3c4cd0a01395f46da20762.r2.dev/";
 
 export const miniApps: MiniApp[] = [
   
@@ -40,7 +40,7 @@ export const miniApps: MiniApp[] = [
     title: "Buscador de gifs con Giphy API",
     description:
       "Aplicación web que consume una API de Giphy para mostrar imágenes animadas relacionadas con términos de búsqueda, utilizando React para la interfaz de usuario e implementando técnicas de caché para mejorar el rendimiento y optimizar el consumo de la API.",
-    technologies: ["JavaScript", "React", "CSS", ],
+    technologies: ["JavaScript", "React", "CSS"],
     repo: "",
     site: "https://nath-s-giphy-search.netlify.app/",
     image: `${baseUrl}giphy-search.netlify.app.png`,
