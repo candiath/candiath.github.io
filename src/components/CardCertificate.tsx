@@ -24,7 +24,7 @@ export const CardCertificate = ({
         <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors h-12">
           {title}
         </h4>
-        <div className="mb:h-90 flex items-center justify-center rounded-lg ">
+        <div className="mb:h-90 h-90 flex items-center justify-center rounded-lg ">
           {image ? (
             <img
               src={image}
@@ -35,7 +35,7 @@ export const CardCertificate = ({
               <div className="text-center p-6 space-y-4">
                 <div className="text-muted-foreground">
                   <FileX2 size={40} className="mx-auto mb-3 opacity-50" />
-                  <p className="text-lg">Certificado no disponible</p>
+                  <p className="text-lg">No se ha podido cargar la previsualización</p>
                 </div>
                 <a
                   href={url}
