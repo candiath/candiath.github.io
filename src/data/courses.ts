@@ -1,17 +1,19 @@
+const baseUrl = "https://pub-d0c86d895d3c4cd0a01395f46da20762.r2.dev/";
+
 export const courses = [
   {
     year: "2025",
     title: "React: de cero a experto - Edición 2025",
     organization: "DevTalles",
     url: "https://cursos.devtalles.com/certificates/o2rkihjv34",
-    // image: "https://cdn.filestackcontent.com/j8WKMskIScC97dllh4na",
+    image: `${baseUrl}React_de_cero_a_experto_-_Edici%C3%B3n_2025.jpg`,
   },
   {
     year: "2024",
     title: "JavaScript Moderno: Guía para dominar el lenguaje",
     organization: "DevTalles",
     url: "https://cursos.devtalles.com/certificates/1zzlixb5yx",
-    // image: "https://cdn.filestackcontent.com/FcO6TDKSrWvlqRUVQLA9?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzY1NTY2NjQ4LCJwYXRoIjoiLyJ9&signature=79f59305564834762a862ff77f81a761ac67d44bd8a9c0b59ae46c3fa74fa397",
+    image: `${baseUrl}JavaScript_Moderno_Gu%C3%ADa_para_dominar_el_lenguaje.jpg`,
   },
   {
     year: "2024",
@@ -19,20 +21,20 @@ export const courses = [
     organization: "Udemy",
     url:
     "https://www.udemy.com/certificate/UC-9be3b002-1f98-42be-801e-34480cac5b04/",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-9be3b002-1f98-42be-801e-34480cac5b04.jpg?v=1729649719000",
+    image: `${baseUrl}NodeJS_De_cero_a_experto.jpg`,
   },
   {
     year: "2024",
     title: "GIT+GitHub: Todo un sistema de control de versiones de cero",
     organization: "DevTalles",
     url: "https://cursos.devtalles.com/certificates/9cdssbyj8y",
-    // image: "https://cdn.filestackcontent.com/eHTC5IiSIyP5XYalxd5F?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzY1NTY2NjQ4LCJwYXRoIjoiLyJ9&signature=79f59305564834762a862ff77f81a761ac67d44bd8a9c0b59ae46c3fa74fa397",
+    image: `${baseUrl}GIT%2BGitHub_Todo_un_sistema_de_control_de_versiones_de_cero.jpg`,
   },
   {
     year: "2024",
     title: "Visual Studio Code: Mejora tu velocidad para codificar",
     organization: "DevTalles",
     url: "https://cursos.devtalles.com/certificates/pmxdxglzd0",
-    // image: "https://cdn.filestackcontent.com/01EydYCaQ9SKXwkQa5Ss?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzY1NTY2NjUwLCJwYXRoIjoiLyJ9&signature=3696e01e8463097c67d0458ce469438b8964f464e7f8976a31222e9651c3a9ca",
+    image: `${baseUrl}Visual_Studio_Code_Mejora_tu_velocidad_para_codificar.jpg`,
   },
 ];

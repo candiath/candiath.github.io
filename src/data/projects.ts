@@ -14,13 +14,14 @@ export const projects = [
     site: "https://kinecandia.netlify.app/",
     repo: "https://github.com/candiath/kine-landing",
   },
-  // {
-  //   title: "Teslo Shop",
-  //   description:
-  //     "FrontEnd para un E-commerce inspirado en los estilos de diseño de Tesla con funcionalidades de búsqueda, filtrado y administración de productos, implementado con React y TypeScript.",
-  //   technologies: ["TypeScript", "React", "Vercel"],
-  //   repo: "https://github.com/Nath-s-React-Courses/07-teslo-shop",
-  // },
+  {
+    title: "Teslo Shop",
+    description:
+      "FrontEnd para un E-commerce inspirado en los estilos de diseño de Tesla con funcionalidades de búsqueda, filtrado y administración de productos, implementado con React y TypeScript.",
+    technologies: ["TypeScript", "React", "Vercel"],
+    repo: "https://github.com/Nath-s-React-Courses/07-teslo-shop",
+    site: "https://naths-tesloshop.netlify.app/",
+  },
 ]
 
 interface MiniApp {
@@ -40,7 +41,7 @@ export const miniApps: MiniApp[] = [
     title: "Heroes App",
     description:
     "Aplicación web que permite buscar y filtrar héroes de cómics utilizando React para la interfaz de usuario.",
-    technologies: ["React", "CSS", "HTML"],
+    technologies: ["React", "Tanstack Query", "CSS", "HTML"],
     repo: "https://github.com/candiath/05-heroes-app",
     site: "https://naths-heroes-app.netlify.app/",
     image: `${baseUrl}heroes-app.png`,
@@ -49,7 +50,7 @@ export const miniApps: MiniApp[] = [
     title: "Buscador de gifs con Giphy API",
     description:
       "Aplicación web que consume una API de Giphy para mostrar imágenes animadas relacionadas con términos de búsqueda, utilizando React para la interfaz de usuario e implementando técnicas de caché para mejorar el rendimiento y optimizar el consumo de la API.",
-    technologies: ["JavaScript", "React", "CSS"],
+    technologies: ["JavaScript", "React", "CSS", "Axios", "HTML"],
     site: "https://nath-s-giphy-search.netlify.app/",
     image: `${baseUrl}giphy-search.netlify.app.png`,
   },
@@ -57,7 +58,7 @@ export const miniApps: MiniApp[] = [
     title: "TODO app",
     description:
     "Aplicación web para gestionar tareas pendientes, utilizando Javascript para la interfaz de usuario.",
-    technologies: ["JavaScript", "CSS"],
+    technologies: ["JavaScript", "CSS", "HTML"],
     repo: "https://github.com/candiath/05-todo-app",
     site: "https://naths-todo-app.netlify.app/",
     image: `${baseUrl}todo-app.netlify.app.png`,
