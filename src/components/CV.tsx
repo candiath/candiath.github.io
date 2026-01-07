@@ -38,7 +38,7 @@ export const CV = () => {
           <div className="bg-card border border-border rounded-lg p-6 max-w-md">
             <p className="text-sm text-muted-foreground">
               <span className="font-semibold text-foreground">Última actualización:</span>{" "}
-              Noviembre 2025
+              Enero 2026
             </p>
           </div>
         </div>
