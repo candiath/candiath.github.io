@@ -1,11 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { Menu, X } from "lucide-react"
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useTranslation('navigation');
 
   const scrollToSection = (id?: string) => {
     if (!id) {
@@ -24,13 +26,13 @@ export default function Navigation() {
   };
 
   const navLinks = [
-    { label: "Proyectos", id: "projects" },
-    { label: "Mini Apps", id: "mini-apps" },
-    { label: "Experiencia y Formación", id: "experience" },
-    { label: "Cursos y Certificados", id: "courses" },
-    { label: "CV", id: "cv" },
-    { label: "Contacto", id: "contact" },
-    { label: "Sobre mí", id: "about" },
+    { label: t('projects'), id: "projects" },
+    { label: t('miniApps'), id: "mini-apps" },
+    { label: t('experience'), id: "experience" },
+    { label: t('courses'), id: "courses" },
+    { label: t('cv'), id: "cv" },
+    { label: t('contact'), id: "contact" },
+    { label: t('about'), id: "about" },
   ]
 
   return (

@@ -1,0 +1,24 @@
+{
+  "title": "Mini Apps",
+  "noImage": "Sorry, no image available",
+  "site": "Website",
+  "code": "Code",
+  "items": [
+    {
+      "title": "Heroes App",
+      "description": "Web application that allows searching and filtering comic book heroes using React for the user interface."
+    },
+    {
+      "title": "GIF Search with Giphy API",
+      "description": "Web application that consumes the Giphy API to display animated images related to search terms, using React for the user interface and implementing caching techniques to improve performance and optimize API consumption."
+    },
+    {
+      "title": "TODO app",
+      "description": "Web application for managing pending tasks, using Javascript for the user interface."
+    },
+    {
+      "title": "BlackJack",
+      "description": "Simple BlackJack game implemented in JavaScript, where the player can play against the computer following the classic rules of the game."
+    }
+  ]
+}

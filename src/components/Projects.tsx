@@ -1,21 +1,26 @@
 import { ExternalLink, Github } from "lucide-react"
+import { useTranslation } from "react-i18next"
 import { projects } from "@/data/projects"
 
 export const Projects = () => {
+  const { t } = useTranslation('projects');
+  
   return (
     <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects" data-section-aliases="proyectos">
       <div>
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
-          Proyectos <span className="text-primary">Destacados</span>
+          {t('title').split(' ')[0]} <span className="text-primary">{t('title').split(' ')[1]}</span>
         </h2>
         <div className="flex flex-wrap justify-center gap-6 py-10">
           {
-            projects.map( (project, index) => (
+            projects.map( (project, index) => {
+              const projectData = (t('items', { returnObjects: true }) as any[])[index];
+              return (
               <div key={index} className="group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-500 hover:shadow-lg hover:shadow-primary w-full md:w-[calc(50%-0.75rem)] flex flex-col">
                 <h3 className="">
-                  {project.title}
+                  {projectData.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{projectData.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.technologies.map( (tech) => (
@@ -27,17 +32,17 @@ export const Projects = () => {
                   { project.site ? 
                     <a href={project.site} className="flex items-center gap-2 px-4 py-2 text-sm bg-primary text-primary-foreground rounded-lg hover:bg-accent transition-colors">
                       <ExternalLink size={16} />
-                      Sitio
+                      {t('site')}
                     </a>
                   : ''}
                   {project.repo ? <a href={project.repo} className="flex items-center gap-2 px-4 py-2 text-sm border border-border rounded-lg hover:border-primary transition-colors text-foreground">
                     <Github size={16}/>
-                    Código
+                    {t('code')}
                   </a> : ''}
                   
                   </div>
               </div>
-            ))
+            )})
           }
         </div>
       </div>

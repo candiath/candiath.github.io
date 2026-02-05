@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
 import { technologies } from "@/data/technologies";
 
 
 export const Hero = () => {
+  const { t } = useTranslation('hero');
+  
   const scrollToSection = (id: string) => {
     let element = GetSectionElement(id);
     if (element) element.scrollIntoView({ behavior: "smooth" });
@@ -23,7 +26,7 @@ export const Hero = () => {
             <div className="w-full h-full overflow-hidden rounded-full group">
               <img
                 src="/profile.jpg"
-                alt="Natán Candia"
+                alt={t('name')}
                 className="w-full h-full object-cover scale-120 transform transition-transform duration-500 group-hover:scale-[1.65]"
               />
             </div>
@@ -31,20 +34,18 @@ export const Hero = () => {
         </div>
 
         <h1 className="text-4xl font-bold">
-          <span className="text-foreground">Natán Candia</span>
+          <span className="text-foreground">{t('name')}</span>
         </h1>
 
         {/* Título principal */}
         <h1 className="text-4xl font-bold m-2">
-          <span className="text-primary">FullStack Developer</span>
+          <span className="text-primary">{t('title')}</span>
           <br />
         </h1>
 
         {/* Descripción */}
         <p className="text-lg mt-4 text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Músico, amante de los animales y del aprendizaje continuo. Construyo
-          soluciones backend robustas y escalables. Especializado en
-          arquitecturas de microservicios, APIs REST y bases de datos SQL.
+          {t('description')}
         </p>
 
         {/* Botones */}
@@ -53,7 +54,7 @@ export const Hero = () => {
             onClick={() => scrollToSection("projects")}
             className="cursor-pointer px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-accent transition-all duration-300  hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
           >
-            Ver Proyectos
+            {t('viewProjects')}
           </button>
 
           <button
@@ -62,7 +63,7 @@ export const Hero = () => {
               scrollToSection("cv");
             }}
           >
-            <span className="font-semibold text-primary ">Ver CV</span>
+            <span className="font-semibold text-primary ">{t('viewCV')}</span>
           </button>
         </div>
 

@@ -1,0 +1,25 @@
+{
+  "title": "Courses & Certifications",
+  "items": [
+    {
+      "year": "2025",
+      "title": "React: from zero to expert - 2025 Edition"
+    },
+    {
+      "year": "2024",
+      "title": "Modern JavaScript: Guide to mastering the language"
+    },
+    {
+      "year": "2024",
+      "title": "NodeJS: From zero to expert"
+    },
+    {
+      "year": "2024",
+      "title": "GIT+GitHub: Complete version control system from scratch"
+    },
+    {
+      "year": "2024",
+      "title": "Visual Studio Code: Improve your coding speed"
+    }
+  ]
+}

@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next"
 import { miniApps } from "@/data/projects"
 import { MiniProjectCard } from "./MiniProjectCard"
 
 
 export const MiniApps = () => {
+  const { t } = useTranslation('miniApps');
+  
   return (
     <section
       className="max-w-6xl mx-auto pt-20"
@@ -11,20 +14,23 @@ export const MiniApps = () => {
     >
       <div>
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
-          Mini <span className="text-primary">Apps</span>
+          {t('title').split(' ')[0]} <span className="text-primary">{t('title').split(' ')[1]}</span>
         </h2>
         <div className="flex flex-wrap justify-center gap-6 py-10">
-          {miniApps.map((miniProject, index) => (
+          {miniApps.map((miniProject, index) => {
+            const miniAppData = (t('items', { returnObjects: true }) as any[])[index];
+            return (
             <MiniProjectCard
               key={index}
-              title={miniProject.title}
-              description={miniProject.description}
+              title={miniAppData.title}
+              description={miniAppData.description}
               technologies={miniProject.technologies}
               site={miniProject.site}
               repo={miniProject.repo}
               image={miniProject.image}
             />
-          ))}
+          )})
+          }
         </div>
       </div>
     </section>

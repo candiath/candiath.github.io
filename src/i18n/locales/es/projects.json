@@ -1,0 +1,19 @@
+{
+  "title": "Proyectos Destacados",
+  "site": "Sitio",
+  "code": "Código",
+  "items": [
+    {
+      "title": "CLINEX",
+      "description": "Sistema distribuido de gestión clínica con soporte para  múltiples sedes, diseñado para optimizar la administración de pacientes, turnos y profesionales  como ejercicio de arquitectura limpia y buenas prácticas en backend."
+    },
+    {
+      "title": "Landing Page Kinecandia",
+      "description": "Landing page para una kinesióloga y fisiatra, que facilita el contacto con  potenciales pacientes y provee una presentación clara de servicios, perfil y testimonios."
+    },
+    {
+      "title": "Teslo Shop",
+      "description": "FrontEnd para un E-commerce inspirado en los estilos de diseño de Tesla con funcionalidades de búsqueda, filtrado y administración de productos, implementado con React y TypeScript."
+    }
+  ]
+}

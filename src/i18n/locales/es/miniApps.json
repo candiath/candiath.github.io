@@ -1,0 +1,24 @@
+{
+  "title": "Mini Apps",
+  "noImage": "Imagen no disponible",
+  "site": "Sitio",
+  "code": "Código",
+  "items": [
+    {
+      "title": "Heroes App",
+      "description": "Aplicación web que permite buscar y filtrar héroes de cómics utilizando React para la interfaz de usuario."
+    },
+    {
+      "title": "Buscador de gifs con Giphy API",
+      "description": "Aplicación web que consume una API de Giphy para mostrar imágenes animadas relacionadas con términos de búsqueda, utilizando React para la interfaz de usuario e implementando técnicas de caché para mejorar el rendimiento y optimizar el consumo de la API."
+    },
+    {
+      "title": "TODO app",
+      "description": "Aplicación web para gestionar tareas pendientes, utilizando Javascript para la interfaz de usuario."
+    },
+    {
+      "title": "BlackJack",
+      "description": "Simple juego de BlackJack implementado en JavaScript, donde el jugador puede jugar contra la computadora siguiendo las reglas clásicas del juego."
+    }
+  ]
+}
