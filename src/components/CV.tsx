@@ -42,7 +42,7 @@ export const CV = () => {
 
   const handleViewCV = (langCode?: string) => {
     const lang = langCode || i18n.language;
-    window.open(cvFiles[lang as keyof typeof cvFiles], '_blank');
+    window.open(cvFiles[lang as keyof typeof cvFiles], '_blank', 'noopener,noreferrer');
     setShowViewDropdown(false);
     // if (langCode) i18n.changeLanguage(langCode);
   };
