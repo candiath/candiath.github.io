@@ -4,6 +4,7 @@ import { projects } from "@/data/projects"
 
 export const Projects = () => {
   const { t } = useTranslation('projects');
+  const translationItems = t('items', { returnObjects: true }) as Record<string, { title: string; description: string }>;
   
   return (
     <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects" data-section-aliases="proyectos">
@@ -13,10 +14,10 @@ export const Projects = () => {
         </h2>
         <div className="flex flex-wrap justify-center gap-6 py-10">
           {
-            projects.map( (project, index) => {
-              const projectData = (t('items', { returnObjects: true }) as any[])[index];
+            projects.map( (project) => {
+              const projectData = translationItems[project.id] || { title: project.title, description: project.description };
               return (
-              <div key={index} className="group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-500 hover:shadow-lg hover:shadow-primary w-full md:w-[calc(50%-0.75rem)] flex flex-col">
+              <div key={project.id} className="group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-500 hover:shadow-lg hover:shadow-primary w-full md:w-[calc(50%-0.75rem)] flex flex-col">
                 <h3 className="">
                   {projectData.title}
                 </h3>
