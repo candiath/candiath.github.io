@@ -63,14 +63,30 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    supportedLngs: ['es', 'en'],
+    supportedLngs: ['en', 'es'],
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
+
+      convertDetectedLanguage: (lng) => {
+        const detected = lng.split('-')[0];
+        // console.log(`Convertiendo idioma detectado: ${lng} -> ${detected}`);
+        return detected;
+      },
     },
     interpolation: {
       escapeValue: false,
     },
-  });
+  }
+  // , (err) => {
+  //   if (err) {
+  //     console.error('Error inicializando i18n:', err);
+  //   } else {
+  //     console.log('i18n ok');
+  //     console.log('Idioma detectado:', i18n.language);
+  //     console.log('Lista idiomas:', i18n.languages);
+  //   }
+  // }
+);
 
 export default i18n;

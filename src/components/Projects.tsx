@@ -24,7 +24,7 @@ export const Projects = () => {
 
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.technologies.map( (tech) => (
-                    <span className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/20">{tech}</span>
+                    <span key={tech} className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/20">{tech}</span>
                   ))}
                 </div>
 

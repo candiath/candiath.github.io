@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Menu, X } from "lucide-react"
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
+import { LanguageSwitch } from "./LanguageSwitch";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,7 +18,7 @@ export default function Navigation() {
       return;
     }
     
-    let element = GetSectionElement(id)
+    const element = GetSectionElement(id)
     if ( element ) element.scrollIntoView({ behavior: "smooth" });
     
     // Limpiar cualquier pathname y usar solo hash
@@ -59,6 +60,7 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            <LanguageSwitch />
           </div>
 
           {/* Mobile menu button */}
@@ -81,6 +83,9 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            <div className="mt-4 px-4">
+              <LanguageSwitch />
+            </div>
           </div>
         )}
       </div>
