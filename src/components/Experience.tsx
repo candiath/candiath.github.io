@@ -72,10 +72,11 @@ export const Experience = () => {
               {t('educationTitle')}
             </h3>
             <div className="space-y-6">
-              {education.map((edu, index) => {
+              {educationData.map((_, index) => {
                 const eduData = educationData[index];
                 return (
                 <div
+                // I'm aware of this index usage, but this is static data that won't dynamically change. 
                   key={index}
                   className="border-l-2 border-accent pl-6 pb-6 last:pb-0 relative"
                 >
