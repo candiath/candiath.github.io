@@ -10,7 +10,7 @@ export const Contact = () => {
     <section id="contact" data-section-aliases="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-balance section-title">
-          {t('title').split(' ').slice(0, -1).join(' ')} <span className="text-primary">{t('title').split(' ').slice(-1)}</span>
+          {t('title').split(' ').slice(0, -1).join(' ')} <span className="text-primary">{t('title').split(' ').slice(-1)[0]}</span>
         </h2>
 
         <p className="text-xl text-muted-foreground mb-12 leading-relaxed">

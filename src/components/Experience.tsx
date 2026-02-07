@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { experience, education } from "@/data/experience";
+import { experience } from "@/data/experience";
 
 
 export const Experience = () => {
@@ -12,7 +12,7 @@ export const Experience = () => {
     <section id="experience" data-section-aliases="experiencia,experiencia-y-formacion,formacion,formación" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
-          {t('title').split(' ').slice(0, -1).join(' ')} <span className="text-primary">{t('title').split(' ').slice(-1)}</span>
+          {t('title').split(' ').slice(0, -1).join(' ')} <span className="text-primary">{t('title').split(' ').slice(-1)[0]}</span>
         </h2>
 
         <div className="grid mb-6 gap-12 md:gap-8 lg:gap-16 md:grid-cols-2">
