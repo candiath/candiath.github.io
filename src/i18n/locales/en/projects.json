@@ -1,5 +1,7 @@
 {
   "title": "Featured Projects",
+  "titlePlain": "Featured",
+  "titleHighlight": "Projects",
   "site": "Website",
   "code": "Code",
   "items": [
