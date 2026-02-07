@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { experience, education } from "@/data/experience";
+import { experience } from "@/data/experience";
 
 
 export const Experience = () => {
