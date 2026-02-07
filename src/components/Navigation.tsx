@@ -1,11 +1,14 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { Menu, X } from "lucide-react"
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
+import { LanguageSwitch } from "./LanguageSwitch";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useTranslation('navigation');
 
   const scrollToSection = (id?: string) => {
     if (!id) {
@@ -15,7 +18,7 @@ export default function Navigation() {
       return;
     }
     
-    let element = GetSectionElement(id)
+    const element = GetSectionElement(id)
     if ( element ) element.scrollIntoView({ behavior: "smooth" });
     
     // Limpiar cualquier pathname y usar solo hash
@@ -24,13 +27,13 @@ export default function Navigation() {
   };
 
   const navLinks = [
-    { label: "Proyectos", id: "projects" },
-    { label: "Mini Apps", id: "mini-apps" },
-    { label: "Experiencia y Formación", id: "experience" },
-    { label: "Cursos y Certificados", id: "courses" },
-    { label: "CV", id: "cv" },
-    { label: "Contacto", id: "contact" },
-    { label: "Sobre mí", id: "about" },
+    { label: t('projects'), id: "projects" },
+    { label: t('miniApps'), id: "mini-apps" },
+    { label: t('experience'), id: "experience" },
+    { label: t('courses'), id: "courses" },
+    { label: t('cv'), id: "cv" },
+    { label: t('contact'), id: "contact" },
+    { label: t('about'), id: "about" },
   ]
 
   return (
@@ -57,6 +60,7 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            <LanguageSwitch />
           </div>
 
           {/* Mobile menu button */}
@@ -79,6 +83,9 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            <div className="mt-4 px-4">
+              <LanguageSwitch />
+            </div>
           </div>
         )}
       </div>

@@ -1,4 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface MiniProjectCardProps {
   title: string;
@@ -18,6 +19,8 @@ export const MiniProjectCard = ({
   // image = "https://placehold.co/600x400",
   image,
 }: MiniProjectCardProps) => {
+  const { t } = useTranslation('miniApps');
+  
   return (
     <div
       className="flex flex-col md:flex-row md:min-w-6xl group p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-500 hover:shadow-lg hover:shadow-primary w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.33%-1rem)] hover:scale-110"
@@ -32,8 +35,8 @@ export const MiniProjectCard = ({
         {/* mobile */}
         <div className="mb-4 md:hidden">
           {(!image) ? (
-            <p className="bg-gray-800 p-20 rounded-lg text-center">
-              Sorry, no image available
+            <p className="bg-muted p-20 rounded-lg text-center">
+              {t('noImage')}
             </p>
           ) : (
           <a href={site} target="_blank" rel="noopener noreferrer">
@@ -61,7 +64,7 @@ export const MiniProjectCard = ({
               className="flex items-center gap-2 px-4 py-2 text-sm bg-primary text-primary-foreground rounded-lg hover:bg-accent transition-colors"
             >
               <ExternalLink size={16} />
-              Sitio
+              {t('site')}
             </a>
           ) : (
             ""
@@ -72,7 +75,7 @@ export const MiniProjectCard = ({
               className="flex items-center gap-2 px-4 py-2 text-sm border border-border rounded-lg hover:border-primary transition-colors text-foreground"
             >
               <Github size={16} />
-              Código
+              {t('code')}
             </a>
           ) : (
             ""
@@ -82,8 +85,8 @@ export const MiniProjectCard = ({
 
       <div className="hidden md:block ml-6 self-center min-w-80">
         {(!image) ? (
-          <p className="bg-gray-800 p-20 rounded-lg text-center">
-            Sorry, no image available
+          <p className="bg-muted p-20 rounded-lg text-center">
+            {t('noImage')}
           </p>
         ) : (
           <a href={site} target="_blank" rel="noopener noreferrer">

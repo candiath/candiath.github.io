@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export const About = () => {
+  const { t } = useTranslation('about');
+  
   return (
     <section
       id="about"
@@ -7,34 +11,16 @@ export const About = () => {
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
-          Sobre <span className="text-primary">Mí</span>
+          {t('title').split(' ')[0]} <span className="text-primary">{t('title').split(' ')[1]}</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="slide-up">
-            <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Hola, soy Natán. Me gusta construir software que resuelva
-              problemas reales y que se sienta prolijo, claro y mantenible.
-              Disfruto mucho del proceso, entender qué hace falta, pensar una
-              solución simple y llevarla a algo que funcione bien.
-            </p>
-            <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Me mueve la curiosidad y el aprendizaje continuo. Siempre estoy
-              explorando nuevas ideas, herramientas o formas de hacer mejor las
-              cosas. Me siento cómodo adaptándome, preguntando, investigando y
-              rompiendo lo que haga falta para entenderlo.
-            </p>
-            <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Fuera del código, soy músico desde chico. La música me ayuda a
-              mantenerme creativo, a bajar un cambio y a ver las cosas desde
-              otro lugar. También me encantan los animales; jugar con
-              "Clarita" siempre me recarga las pilas.
-            </p>
-            <p className="text-lg text-foreground mb-6 leading-relaxed">
-              Busco proyectos y oportunidades donde pueda aportar valor de
-              verdad, trabajar con buena gente y seguir creciendo tanto técnica
-              como personalmente.
-            </p>
+            {(t('paragraphs', { returnObjects: true }) as string[]).map((paragraph, index) => (
+              <p key={index} className="text-lg text-foreground mb-6 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           <div className="hidden md:flex items-center justify-center slide-up">

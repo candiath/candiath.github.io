@@ -1,0 +1,36 @@
+{
+  "title": "Experience & Education",
+  "experienceTitle": "Experience",
+  "educationTitle": "Education",
+  "experience": [
+    {
+      "period": "June 2025 - Present",
+      "title": "CLINEX",
+      "company": "Independent Development",
+      "description": "Website and administration panel (under construction) for a distributed clinical management system with multi-site support. Allows managing patients, appointments, and professionals, viewing metrics and reports, and administering permissions and configurations from a secure, scalable interface optimized for clinical workflow."
+    },
+    {
+      "period": "March 2025 - April 2025",
+      "title": "Kinecandia Landing Page",
+      "company": "Kinecandia",
+      "description": "Conversion-focused landing page for a kinesiologist and physiatrist: showcases services, professional profile, and testimonials, includes contact form and calls to action, and is designed responsive and optimized for speed."
+    }
+  ],
+  "education": [
+    {
+      "year": "2021-2022",
+      "title": "Computer Engineering",
+      "organization": "Universidad Gastón Dachary"
+    },
+    {
+      "year": "2016-2020",
+      "title": "Bachelor's in Information Systems",
+      "organization": "UNAM - Faculty of Exact, Chemical and Natural Sciences"
+    },
+    {
+      "year": "2010-2015",
+      "title": "Master Builder",
+      "organization": "EPET N° 13"
+    }
+  ]
+}

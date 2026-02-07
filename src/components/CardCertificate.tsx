@@ -1,4 +1,5 @@
 import { ExternalLink, FileX2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface CardCertificateProps {
   year: string;
@@ -12,6 +13,8 @@ export const CardCertificate = ({
   url,
   image,
 }: CardCertificateProps) => {
+  const { t } = useTranslation('common');
+  
   return (
     <>
       <a
@@ -35,7 +38,7 @@ export const CardCertificate = ({
               <div className="text-center p-6 space-y-4">
                 <div className="text-muted-foreground">
                   <FileX2 size={40} className="mx-auto mb-3 opacity-50" />
-                  <p className="text-lg">No se ha podido cargar la previsualización</p>
+                  <p className="text-lg">{t('noPreview')}</p>
                 </div>
                 <a
                   href={url}
@@ -43,7 +46,7 @@ export const CardCertificate = ({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-accent hover:text-accent/80 hover:underline transition-colors group"
                 >
-                  Ver en sitio externo
+                  {t('viewExternal')}
                   <ExternalLink
                     size={14}
                     className=""

@@ -1,0 +1,19 @@
+{
+  "title": "Featured Projects",
+  "site": "Website",
+  "code": "Code",
+  "items": {
+    "clinex": {
+      "title": "CLINEX",
+      "description": "Distributed clinical management system with multi-site support, designed to optimize patient, appointment, and professional management as an exercise in clean architecture and backend best practices."
+    },
+    "kinecandia": {
+      "title": "Kinecandia Landing Page",
+      "description": "Landing page for a kinesiologist and physiatrist, facilitating contact with potential patients and providing a clear presentation of services, profile, and testimonials."
+    },
+    "teslo-shop": {
+      "title": "Teslo Shop",
+      "description": "Frontend for an E-commerce inspired by Tesla's design styles with search, filtering, and product management functionalities, implemented with React and TypeScript."
+    }
+  }
+}
