@@ -13,7 +13,7 @@
     },
     "teslo-shop": {
       "title": "Teslo Shop",
-      "description": "FrontEnd para un E-commerce inspirado en los estilos de diseño de Tesla con funcionalidades de búsqueda, filtrado y administración de productos, implementado con React y TypeScript."
+      "description": "Frontend para un E-commerce inspirado en los estilos de diseño de Tesla con funcionalidades de búsqueda, filtrado y administración de productos, implementado con React y TypeScript."
     }
   }
 }
