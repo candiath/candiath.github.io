@@ -3,7 +3,7 @@ import { courses } from "@/data/courses";
 import { CardCertificate } from "./CardCertificate";
 
 
-export const Experience = () => {
+export const Courses = () => {
   const { t } = useTranslation('courses');
   const coursesData = t('items', { returnObjects: true }) as any[];
   
