@@ -15,12 +15,6 @@ initializeTheme();
 // Ocultar spinner cuando React se monta
 const loadingScreen = document.getElementById('loading-screen');
 
-const preloadComponents = () => {
-  import("./components/Navigation");
-  import("./components/Hero");
-  // etc.
-};
-preloadComponents();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
