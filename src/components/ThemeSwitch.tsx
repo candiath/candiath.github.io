@@ -14,7 +14,6 @@ export const ThemeSwitch = () => {
       title={`${t('theme')}: ${theme === 'dark' ? t('dark') : t('light')}`}
     >
       {theme === 'dark' ? (
-        //TODO
         <Moon size={20} className="transition-transform hover:rotate-30 duration-500" />
       ) : (
         <Sun size={20} className="transition-transform hover:rotate-90 duration-800" />

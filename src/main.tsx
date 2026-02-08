@@ -3,16 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import './i18n/config'
 import App from './App.tsx'
+import { getInitialTheme, applyThemeClass } from './helpers/theme.helper'
 
 const initializeTheme = () => {
-  const savedTheme = localStorage.getItem('theme');
-  
-  if (savedTheme) {
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-  } else {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.classList.toggle('dark', prefersDark);
-  }
+  const theme = getInitialTheme();
+  applyThemeClass(theme);
 };
 
 initializeTheme();
