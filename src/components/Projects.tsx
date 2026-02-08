@@ -10,7 +10,7 @@ export const Projects = () => {
     <section className="mt-20 py-20 max-w-6xl mx-auto" id="projects" data-section-aliases="proyectos">
       <div>
         <h2 className="text-4xl sm:text-5xl font-bold mb-12 text-center text-balance section-title">
-          {t('title').split(' ')[0]} <span className="text-primary">{t('title').split(' ')[1]}</span>
+          {t('titlePlain')} <span className="text-primary">{t('titleHighlight')}</span>
         </h2>
         <div className="flex flex-wrap justify-center gap-6 py-10">
           {
