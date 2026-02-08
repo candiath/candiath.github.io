@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Spinner } from "./components/ui/Spinner";
+import { ThemeProvider } from "./contexts/ThemeProvider";
 
 import { Hero } from "./components/Hero";
 import Navigation from "./components/Navigation";
@@ -86,13 +87,13 @@ const LazyContent = () => {
 
 const App = () => {
   return (
-    <>
+    <ThemeProvider>
       <Navigation />
       <Hero />
       <Suspense fallback={<Spinner />}>
         <LazyContent />
       </Suspense>
-    </>
+    </ThemeProvider>
   );
 }
 
