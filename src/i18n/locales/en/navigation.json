@@ -5,5 +5,7 @@
   "courses": "Courses & Certifications",
   "cv": "Resume",
   "contact": "Contact",
-  "about": "About Me"
+  "about": "About Me",
+  "openMenu": "Open navigation menu",
+  "closeMenu": "Close navigation menu"
 }
