@@ -3,7 +3,11 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import Flag from 'react-world-flags';
 
-export const LanguageSwitch = () => {
+interface LanguageSwitchProps {
+  onLanguageChange?: () => void;
+}
+
+export const LanguageSwitch = ({ onLanguageChange }: LanguageSwitchProps = {}) => {
   const { i18n } = useTranslation();
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -33,6 +37,7 @@ export const LanguageSwitch = () => {
   const handleLanguageChange = (langCode: string) => {
     i18n.changeLanguage(langCode);
     setShowDropdown(false);
+    onLanguageChange?.();
   };
 
   const toggleDropdown = () => {

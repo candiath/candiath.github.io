@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { Menu, X } from "lucide-react"
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
@@ -9,6 +9,33 @@ import { LanguageSwitch } from "./LanguageSwitch";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const { t } = useTranslation('navigation');
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  // menú móvil
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      
+      if (
+        isOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const scrollToSection = (id?: string) => {
     if (!id) {
@@ -65,7 +92,11 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-foreground hover:text-primary transition-colors">
+            <button 
+              ref={menuButtonRef}
+              onClick={() => setIsOpen(!isOpen)} 
+              className="text-foreground hover:text-primary transition-colors"
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -73,7 +104,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
+          <div ref={mobileMenuRef} className="md:hidden mt-4 pb-4 border-t border-border">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -84,7 +115,7 @@ export default function Navigation() {
               </button>
             ))}
             <div className="mt-4 px-4">
-              <LanguageSwitch />
+              <LanguageSwitch onLanguageChange={() => setIsOpen(false)} />
             </div>
           </div>
         )}
