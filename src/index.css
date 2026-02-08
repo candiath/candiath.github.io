@@ -4,18 +4,18 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* <CHANGE> Dark theme with blue accent for backend portfolio */
+  /* <CHANGE> Light theme with blue accent for backend portfolio */
   /* Used variables */
-  --background: oklch(0.11 0 0);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.15 0 0);
-  --border: oklch(0.25 0 0);
-  --primary: oklch(0.55 0.2 260);
+  --background: oklch(0.98 0 0);
+  --foreground: oklch(0.15 0 0);
+  --card: oklch(1 0 0);
+  --border: oklch(0.88 0 0);
+  --primary: oklch(0.5 0.2 260);
   --primary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.2 0 0);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.6 0.22 260);
-  --ring: oklch(0.55 0.2 260);
+  --muted: oklch(0.94 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.55 0.22 260);
+  --ring: oklch(0.5 0.2 260);
 
   
 

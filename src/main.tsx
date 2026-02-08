@@ -3,6 +3,14 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import './i18n/config'
 import App from './App.tsx'
+import { getInitialTheme, applyThemeClass } from './helpers/theme.helper'
+
+const initializeTheme = () => {
+  const theme = getInitialTheme();
+  applyThemeClass(theme);
+};
+
+initializeTheme();
 
 // Ocultar spinner cuando React se monta
 const loadingScreen = document.getElementById('loading-screen');

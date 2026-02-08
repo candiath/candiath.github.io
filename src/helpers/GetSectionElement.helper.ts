@@ -1,6 +1,6 @@
 export const GetSectionElement = (id: string): HTMLElement | null => {
 
-  let element = document.getElementById(id);
+  const element = document.getElementById(id);
   if (element) return element;
 
   const allSections = document.querySelectorAll("[data-section-aliases]");

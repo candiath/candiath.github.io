@@ -1,4 +1,7 @@
 {
   "noPreview": "Preview could not be loaded",
-  "viewExternal": "View on external site"
+  "viewExternal": "View on external site",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark"
 }
