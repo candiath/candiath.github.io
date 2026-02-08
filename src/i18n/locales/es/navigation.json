@@ -5,5 +5,7 @@
   "courses": "Cursos y Certificados",
   "cv": "CV",
   "contact": "Contacto",
-  "about": "Sobre mí"
+  "about": "Sobre mí",
+  "openMenu": "Abrir menú de navegación",
+  "closeMenu": "Cerrar menú de navegación"
 }

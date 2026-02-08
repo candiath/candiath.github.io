@@ -98,6 +98,9 @@ export default function Navigation() {
               ref={menuButtonRef}
               onClick={() => setIsOpen(!isOpen)} 
               className="text-foreground hover:text-primary transition-colors"
+              aria-label={isOpen ? t('closeMenu') : t('openMenu')}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -106,7 +109,11 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div ref={mobileMenuRef} className="md:hidden mt-4 pb-4 border-t border-border">
+          <div 
+            id="mobile-menu"
+            ref={mobileMenuRef} 
+            className="md:hidden mt-4 pb-4 border-t border-border"
+          >
             {navLinks.map((link) => (
               <button
                 key={link.id}
