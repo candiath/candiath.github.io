@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
-import Flag from 'react-world-flags';
+import { FlagIcon } from './ui/FlagIcon';
 
 export const LanguageSwitch = () => {
   const { i18n } = useTranslation();
@@ -48,7 +48,7 @@ export const LanguageSwitch = () => {
         aria-expanded={showDropdown}
         aria-haspopup="true"
       >
-        <Flag code={currentLanguage.countryCode} style={{ width: 20, height: 15 }} />
+        <FlagIcon code={currentLanguage.countryCode as 'ES' | 'US'} size={20} />
         <span>{currentLanguage.code.toUpperCase()}</span>
         <ChevronDown size={16} className={`transition-transform ${showDropdown ? 'rotate-180' : ''}`} />
       </button>
@@ -63,7 +63,7 @@ export const LanguageSwitch = () => {
                 i18n.language === lang.code ? 'bg-primary/10 text-primary' : 'text-foreground'
               }`}
             >
-              <Flag code={lang.countryCode} style={{ width: 24, height: 18 }} />
+              <FlagIcon code={lang.countryCode as 'ES' | 'US'} size={24} />
               <span className="flex-1">{lang.label}</span>
               {i18n.language === lang.code && (
                 <span className="text-primary font-bold">✓</span>

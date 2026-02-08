@@ -2,7 +2,7 @@ import { Download, ChevronDown, SquareArrowOutUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
 import { CV_HASH } from "../generated/cv-hash";
-import Flag from "react-world-flags";
+import { FlagIcon } from "./ui/FlagIcon";
 
 export const CV = () => {
   const { t, i18n } = useTranslation('cv');
@@ -95,7 +95,7 @@ export const CV = () => {
                 <SquareArrowOutUpRight size={22} />
                 <span className="flex-1 text-left">{t("viewBrowser")}</span>
                 <span className="text-sm opacity-80 flex items-center gap-1">
-                  (<Flag code={currentLanguage.countryCode} style={{ width: 20, height: 15,marginTop: "2px" }} />{" "}
+                  (<FlagIcon code={currentLanguage.countryCode as 'ES' | 'US'} size={20} />{" "}
                   {currentLanguage.code.toUpperCase()})
                 </span>
               </button>
@@ -128,10 +128,7 @@ export const CV = () => {
                   >
                     <SquareArrowOutUpRight size={22} />
 
-                    <Flag
-                      code={lang.countryCode}
-                      style={{ width: 24, height: 18 }}
-                    />
+                    <FlagIcon code={lang.countryCode as 'ES' | 'US'} size={24} />
                     <span className="flex-1">{lang.label}</span>
                     {i18n.language === lang.code && (
                       <span className="text-primary font-bold">✓</span>
@@ -153,7 +150,7 @@ export const CV = () => {
                 <Download size={22} className="group-hover:animate-bounce" />
                 <span className="flex-1 text-left">{t("download")}</span>
                 <span className="text-sm opacity-80 flex items-center gap-1">
-                  (<Flag code={currentLanguage.countryCode} style={{ width: 20, height: 15,marginTop: "2px" }} /> {currentLanguage.code.toUpperCase()})
+                  (<FlagIcon code={currentLanguage.countryCode as 'ES' | 'US'} size={20} /> {currentLanguage.code.toUpperCase()})
                 </span>
               </button>
               <button
@@ -184,7 +181,7 @@ export const CV = () => {
                     }`}
                   >
                     <Download size={18} />
-                    <Flag code={lang.countryCode} style={{ width: 20, height: 15,marginTop: "2px" }} />
+                    <FlagIcon code={lang.countryCode as 'ES' | 'US'} size={20} />
                     {/* <span className="text-xl">{lang.countryCode}</span> */}
                     <span className="flex-1">{lang.label}</span>
                     {i18n.language === lang.code && (
