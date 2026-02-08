@@ -4,6 +4,19 @@ import './index.css'
 import './i18n/config'
 import App from './App.tsx'
 
+const initializeTheme = () => {
+  const savedTheme = localStorage.getItem('theme');
+  
+  if (savedTheme) {
+    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', prefersDark);
+  }
+};
+
+initializeTheme();
+
 // Ocultar spinner cuando React se monta
 const loadingScreen = document.getElementById('loading-screen');
 

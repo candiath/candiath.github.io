@@ -1,4 +1,7 @@
 {
   "noPreview": "No se ha podido cargar la previsualización",
-  "viewExternal": "Ver en sitio externo"
+  "viewExternal": "Ver en sitio externo",
+  "theme": "Tema",
+  "light": "Claro",
+  "dark": "Oscuro"
 }

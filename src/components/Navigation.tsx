@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 import { Menu, X } from "lucide-react"
 import { GetSectionElement } from "../helpers/GetSectionElement.helper";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -60,6 +61,7 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
+            <ThemeSwitch />
             <LanguageSwitch />
           </div>
 
@@ -83,7 +85,8 @@ export default function Navigation() {
                 {link.label}
               </button>
             ))}
-            <div className="mt-4 px-4">
+            <div className="mt-4 px-4 flex gap-2">
+              <ThemeSwitch />
               <LanguageSwitch />
             </div>
           </div>
