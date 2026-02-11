@@ -32,7 +32,7 @@ export const projects: Project[] = [
       "FrontEnd para un E-commerce inspirado en los estilos de diseño de Tesla con funcionalidades de búsqueda, filtrado y administración de productos, implementado con React y TypeScript.",
     technologies: ["TypeScript", "React", "Vercel"],
     repo: "https://github.com/Nath-s-React-Courses/07-teslo-shop",
-    site: "https://naths-tesloshop.netlify.app/",
+    // site: "https://naths-tesloshop.netlify.app/",
   },
 ]
 
@@ -67,6 +67,7 @@ export const miniApps: MiniApp[] = [
       "Aplicación web que consume una API de Giphy para mostrar imágenes animadas relacionadas con términos de búsqueda, utilizando React para la interfaz de usuario e implementando técnicas de caché para mejorar el rendimiento y optimizar el consumo de la API.",
     technologies: ["JavaScript", "React", "CSS", "Axios", "HTML"],
     site: "https://nath-s-giphy-search.netlify.app/",
+    repo: "https://github.com/candiath/03-gifs-app",
     image: `${baseUrl}giphy-search.netlify.app.png`,
   },
   {
