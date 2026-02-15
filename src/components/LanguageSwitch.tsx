@@ -37,6 +37,7 @@ export const LanguageSwitch = ({ onLanguageChange }: LanguageSwitchProps = {}) =
 
   const handleLanguageChange = (langCode: string) => {
     i18n.changeLanguage(langCode);
+    localStorage.setItem('i18nextLng', langCode);
     setShowDropdown(false);
     onLanguageChange?.();
   };
