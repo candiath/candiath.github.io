@@ -4,6 +4,7 @@ import { ThemeProvider } from "./contexts/ThemeProvider";
 
 import { Hero } from "./components/Hero";
 import Navigation from "./components/Navigation";
+import { Calendly } from "./components/Calendly";
 const About = lazy(() => import("./components/About").then(m => ({ default: m.About })));
 const Projects = lazy(() => import("./components/Projects").then(m => ({ default: m.Projects })));
 const MiniApps = lazy(() => import("./components/MiniApps").then(m => ({ default: m.MiniApps })));
@@ -12,6 +13,7 @@ const Courses = lazy(() => import("./components/Courses").then(m => ({ default: 
 const CV = lazy(() => import("./components/CV").then(m => ({ default: m.CV })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
+// const Calendly = lazy(() => import("../src/components/Calendly").then(c => ({ default: c.Calendly})));
 
 const LazyContent = () => {
   const [loaded, setLoaded] = useState(false);
@@ -79,6 +81,7 @@ const LazyContent = () => {
       <Courses />
       <CV />
       <Contact />
+      <Calendly />
       <About />
       <Footer />
     </>
