@@ -78,7 +78,7 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center ">
+          <div className="hidden lg:flex items-center ">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -93,7 +93,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button 
               ref={menuButtonRef}
               onClick={() => setIsOpen(!isOpen)} 
@@ -112,7 +112,7 @@ export default function Navigation() {
           <div 
             id="mobile-menu"
             ref={mobileMenuRef} 
-            className="md:hidden mt-4 pb-4 border-t border-border"
+            className="lg:hidden mt-4 pb-4 border-t border-border"
           >
             {navLinks.map((link) => (
               <button
