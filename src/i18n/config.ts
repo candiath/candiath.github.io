@@ -66,7 +66,7 @@ i18n
     supportedLngs: ['en', 'es'],
     detection: {
       order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
+      caches: [],
 
       convertDetectedLanguage: (lng) => {
         const detected = lng.split('-')[0];
