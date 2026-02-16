@@ -2,6 +2,8 @@ import { Suspense, lazy, useEffect, useState } from "react";
 import { Spinner } from "./components/ui/Spinner";
 import { ThemeProvider } from "./contexts/ThemeProvider";
 
+import { ErrorBoundary } from './components/ErrorBoundary'
+
 import { Hero } from "./components/Hero";
 import Navigation from "./components/Navigation";
 import { Calendly } from "./components/Calendly";
@@ -81,7 +83,9 @@ const LazyContent = () => {
       <Courses />
       <CV />
       <Contact />
-      <Calendly />
+      <ErrorBoundary fallback={undefined} >
+        <Calendly />
+      </ErrorBoundary>
       <About />
       <Footer />
     </>
